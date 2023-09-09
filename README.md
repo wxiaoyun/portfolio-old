@@ -15,7 +15,7 @@ This is a personal portfolio page built with React and TypeScript. It utilizes a
 If you haven't installed Bun yet, you can install it using the following command:
 
 ```bash
-curl -fsSL https://bun.sh/install | bash
+curl -fsSL https://bun.sh/install | bash # for macOS, Linux, and WSL
 ```
 
 ### Clone the Repository
