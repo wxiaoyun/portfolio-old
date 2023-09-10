@@ -3,9 +3,13 @@ import { AppLogic, Footer, Navbar } from "..";
 
 export const App: React.FC = () => {
   return (
-    <div className="h-full w-full">
+    <div className="min-h-screen w-full flex flex-col">
       <Navbar />
-      <AppLogic />
+
+      <div className="flex-grow">
+        <AppLogic />
+      </div>
+
       <Footer />
     </div>
   );
