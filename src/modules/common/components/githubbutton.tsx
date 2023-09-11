@@ -4,7 +4,7 @@ import { Button } from ".";
 const GithubButton: React.FC = () => {
   return (
     <Button
-      onClick={() => window.open("https://github.com/ForAeons").focus()}
+      onClick={() => window.open("https://github.com/ForAeons")!.focus()}
       BtnClass={{ intent: "invisible" }}
     >
       <img
