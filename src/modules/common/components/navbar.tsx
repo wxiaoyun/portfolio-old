@@ -1,71 +1,49 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import { Button } from ".";
-import Separator from "./separator";
+import { Button } from "@/components/ui/button";
+import { ModeToggle } from "@/components/mode-toggle";
+import { Separator } from "@/components/ui/separator";
 
 export const Navbar: React.FC = () => {
-  const navigate = useNavigate();
-  return (
-    <div className="w-full flex flex-row justify-around p-2 bg-slate-900">
-      <p className="text-slate-100">Xiaoyun Wu</p>
+	const navigate = useNavigate();
+	return (
+		<div className="w-full flex flex-row justify-center gap-3 p-3 bg-background text-primary">
+			<Button onClick={() => navigate("/aboutme")} variant={"ghost"}>
+				About Me
+			</Button>
 
-      <div className="flex flex-row gap-4">
-        <Button
-          onClick={() => navigate("/aboutme")}
-          BtnClass={{ intent: "invisible", shadow: "none", text: "slatewhite" }}
-        >
-          About Me
-        </Button>
+			<Separator orientation="vertical" />
 
-        <Separator orientation="vertical" />
+			<Button onClick={() => navigate("/experiences")} variant={"ghost"}>
+				Experiences
+			</Button>
 
-        <Button
-          onClick={() => navigate("/experiences")}
-          BtnClass={{ intent: "invisible", shadow: "none", text: "slatewhite" }}
-        >
-          Experiences
-        </Button>
+			<Separator orientation="vertical" />
 
-        <Separator orientation="vertical" />
+			<Button onClick={() => navigate("/projects")} variant={"ghost"}>
+				Projects
+			</Button>
 
-        <Button
-          onClick={() => navigate("/projects")}
-          BtnClass={{ intent: "invisible", shadow: "none", text: "slatewhite" }}
-        >
-          Projects
-        </Button>
+			<Separator orientation="vertical" />
 
-        <Separator orientation="vertical" />
+			<Button variant={"ghost"}>
+				<a href="/WU_XIAOYUN_CV_v2.3.pdf" download>
+					Resume
+				</a>
+			</Button>
 
-        <Button
-          onClick={() => navigate("/contact")}
-          BtnClass={{ intent: "invisible", shadow: "none", text: "slatewhite" }}
-        >
-          Contact Me
-        </Button>
+			<Separator orientation="vertical" />
 
-        <Separator orientation="vertical" />
+			<Button onClick={() => navigate("/blog")} variant={"ghost"}>
+				Blog
+			</Button>
 
-        <Button
-          BtnClass={{ intent: "invisible", shadow: "none", text: "slatewhite" }}
-        >
-          <a href="/WU_XIAOYUN_CV_v2.3.pdf" download>
-            Resume
-          </a>
-        </Button>
+			<Separator orientation="vertical" />
 
-        <Separator orientation="vertical" />
-
-        <Button
-          onClick={() => navigate("/blog")}
-          BtnClass={{ intent: "invisible", shadow: "none", text: "slatewhite" }}
-        >
-          Blog
-        </Button>
-      </div>
-    </div>
-  );
+			<ModeToggle />
+		</div>
+	);
 };
 
 export default Navbar;
