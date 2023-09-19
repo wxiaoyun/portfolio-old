@@ -22,7 +22,7 @@ curl -fsSL https://bun.sh/install | bash # for macOS, Linux, and WSL
 
 ```bash
 git clone https://github.com/ForAeons/ForAeons.github.io.git
-cd ForAeons.github.io.git
+cd ForAeons.github.io
 ```
 
 ### Install Packages
