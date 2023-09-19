@@ -150,7 +150,7 @@ export const AboutMe: React.FC = () => {
 
 				<p className="leading-7 [&:not(:first-child)]:mt-6">
 					I enjoy playing drums and I am currently learning how to play golf. I
-					also working out and watching movies.
+					also a frequent gym visitor and I absolute love watching movies.
 				</p>
 			</div>
 		</div>
