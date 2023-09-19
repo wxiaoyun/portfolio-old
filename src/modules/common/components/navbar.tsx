@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+
 import { Button } from ".";
 import Separator from "./separator";
 
@@ -47,10 +48,11 @@ export const Navbar: React.FC = () => {
         <Separator orientation="vertical" />
 
         <Button
-          onClick={() => navigate("/resume")}
           BtnClass={{ intent: "invisible", shadow: "none", text: "slatewhite" }}
         >
-          Resume
+          <a href="/WU_XIAOYUN_CV_v2.3.pdf" download>
+            Resume
+          </a>
         </Button>
 
         <Separator orientation="vertical" />
