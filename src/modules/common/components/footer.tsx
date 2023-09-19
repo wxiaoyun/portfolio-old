@@ -47,6 +47,10 @@ export const Footer: React.FC = () => {
 								></path>
 							</svg>
 						</a>
+
+						<a href="mailto:e0702008@u.nus.edu">
+							<img src="/email.png" width="25" height="25" alt="email" />
+						</a>
 					</div>
 				</div>
 
