@@ -7,13 +7,24 @@ export const Footer: React.FC = () => {
 
 	return (
 		<div className="w-full flex flex-row justify-between p-4 bg-background text-primary">
-			<a
-				href="https://www.flaticon.com/free-icons/young"
-				title="young icons"
-				className="text-sm self-end"
-			>
-				<p className="text-sm text-muted-foreground">Web icon from Flaticon</p>
-			</a>
+			<p className="text-sm text-muted-foreground">
+				Icons from{" "}
+				<a
+					href="https://www.flaticon.com/"
+					title="flaticons"
+					className="text-sm self-end"
+				>
+					Flaticon
+				</a>{" "}
+				and{" "}
+				<a
+					href="https://devicon.dev/"
+					title="devicon"
+					className="text-sm self-end"
+				>
+					Devicon
+				</a>
+			</p>
 
 			<div className="flex flex-row gap-4">
 				<div className="flex flex-col gap-2">
