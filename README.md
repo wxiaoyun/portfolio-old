@@ -38,10 +38,18 @@ bun install
 To start the development server, run:
 
 ```bash
-bun run dev
+bun dev
 ```
 
 This will start the development server, and you can access the application at `http://localhost:3000`.
+
+## Deploying to Github Pages
+
+To deploy the application to Github Pages, run:
+
+```bash
+bun run deploy
+```
 
 ## Built With
 

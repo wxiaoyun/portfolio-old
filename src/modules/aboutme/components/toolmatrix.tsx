@@ -1,133 +1,87 @@
-import React, { ReactNode } from "react";
+import React from "react";
 
 import { motion, useMotionValue } from "framer-motion";
 import { Tool } from "./tool";
 
-const grid: ReactNode[][] = [
+const size = 60;
+const gap = 5;
+
+const grid: { src: string; alt: string }[][] = [
 	[
-		<img
-			src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vim/vim-plain.svg"
-			alt="vim"
-			width="45"
-			height="45"
-			key={"vim"}
-		/>,
-		<img
-			src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg"
-			alt="go"
-			width="45"
-			height="45"
-			key={"go"}
-		/>,
-		<img
-			src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-			alt="typescript"
-			width="45"
-			height="45"
-			key={2}
-		/>,
-		<img
-			src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-			alt="javascript"
-			width="45"
-			height="45"
-			key={"javascript"}
-		/>,
-		<img
-			src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
-			alt="java"
-			width="45"
-			height="45"
-			key={"java"}
-		/>,
-		<img
-			src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg"
-			alt="ruby"
-			width="45"
-			height="45"
-			key={"ruby"}
-		/>,
+		{
+			src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vim/vim-plain.svg",
+			alt: "vim",
+		},
+		{
+			src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg",
+			alt: "go",
+		},
+		{
+			src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+			alt: "typescript",
+		},
+		{
+			src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+			alt: "javascript",
+		},
+		{
+			src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+			alt: "java",
+		},
+		{
+			src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg",
+			alt: "ruby",
+		},
 	],
 	[
-		<img
-			src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-			alt="python"
-			width="45"
-			height="45"
-			key={"python"}
-		/>,
-		<img
-			src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-			alt="git"
-			width="45"
-			height="45"
-			key={"git"}
-		/>,
-		<img
-			src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-			alt="react"
-			width="45"
-			height="45"
-			key={"react"}
-		/>,
-		<img
-			src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
-			alt="redux"
-			width="45"
-			height="45"
-			key={"redux"}
-		/>,
-		<img
-			src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-			alt="html"
-			width="45"
-			height="45"
-			key={"html"}
-		/>,
-		<img
-			src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-			alt="css"
-			width="45"
-			height="45"
-			key={"css"}
-		/>,
+		{
+			src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+			alt: "python",
+		},
+		{
+			src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+			alt: "git",
+		},
+		{
+			src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+			alt: "react",
+		},
+		{
+			src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+			alt: "redux",
+		},
+		{
+			src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+			alt: "html",
+		},
+		{
+			src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+			alt: "css",
+		},
 	],
 	[
-		<img
-			src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
-			alt="tailwind"
-			width="45"
-			height="45"
-			key={"tailwind"}
-		/>,
-		<img
-			src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-			alt="postgresql"
-			width="45"
-			height="45"
-			key={"postgresql"}
-		/>,
-		<img
-			src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-			alt="mysql"
-			width="45"
-			height="45"
-			key={"mysql"}
-		/>,
-		<img
-			src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-original-wordmark.svg"
-			alt="rails"
-			width="45"
-			height="45"
-			key={"rails"}
-		/>,
+		{
+			src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+			alt: "tailwind",
+		},
+		{
+			src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+			alt: "postgresql",
+		},
+		{
+			src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+			alt: "mysql",
+		},
+		{
+			src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-original-wordmark.svg",
+			alt: "rails",
+		},
 	],
 ];
 
 export const ToolMatrix: React.FC = () => {
-	const size = 60;
-	const gap = 5;
-	const [active, setActive] = React.useState({ row: 0, col: 0 });
+	// use -1 to prevent element[0][0] form glitching
+	const [active, setActive] = React.useState({ row: -1, col: -1 });
 	const x = useMotionValue(0);
 	const y = useMotionValue(0);
 
@@ -146,7 +100,7 @@ export const ToolMatrix: React.FC = () => {
 				}}
 			>
 				{grid.map((row, rowIndex) =>
-					row.map((item, colIndex) => (
+					row.map((img, colIndex) => (
 						<Tool
 							x={x}
 							y={y}
@@ -157,9 +111,8 @@ export const ToolMatrix: React.FC = () => {
 							key={rowIndex * 31 + colIndex}
 							size={size}
 							gap={gap}
-						>
-							{item}
-						</Tool>
+							img={img}
+						/>
 					)),
 				)}
 			</motion.div>
