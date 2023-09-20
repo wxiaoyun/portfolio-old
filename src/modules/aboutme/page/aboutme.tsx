@@ -77,7 +77,7 @@ export const AboutMe: React.FC = () => {
 			<Separator orientation="horizontal" className="max-w-2xl" />
 
 			<motion.div
-				className="max-w-2xl w-full"
+				className="max-w-2xl w-full mb-24"
 				initial="offscreen"
 				whileInView="onscreen"
 				viewport={{ once: true, amount: 0.8 }}

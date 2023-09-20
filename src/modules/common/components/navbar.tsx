@@ -33,11 +33,12 @@ export const Navbar: React.FC = () => {
 				</a>
 			</Button>
 
-			<Separator orientation="vertical" />
+			{/* TODO:  */}
+			{/* <Separator orientation="vertical" />
 
 			<Button onClick={() => navigate("/blog")} variant={"ghost"}>
 				Blog
-			</Button>
+			</Button> */}
 
 			<Separator orientation="vertical" />
 
