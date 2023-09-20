@@ -64,9 +64,13 @@ export const AboutMe: React.FC = () => {
 				viewport={{ once: true, amount: 0.8 }}
 			>
 				<motion.div variants={sectionVariants} className="flex flex-col gap-3">
-					<div className="text-lg font-semibold w-full mb-8">
+					<div className="text-lg font-semibold w-full">
 						Tools and Technologies that I use
 					</div>
+
+					<p className="text-sm text-muted-foreground mb-8">
+						Try dragging the icons :P
+					</p>
 
 					<ToolMatrix />
 				</motion.div>
