@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a personal portfolio page built with React and TypeScript. It utilizes a variety of modern web technologies including Tailwind, Vite, Redux, and Radix UI.
+This is a personal portfolio page built with React and TypeScript. It utilizes a variety of modern web technologies including Tailwind, Vite, Redux, Radix UI, Shadcn UI and Framer Motion.
 
 ## Prerequisites
 
@@ -51,3 +51,5 @@ This will start the development server, and you can access the application at `h
 - [Vite](https://vitejs.dev/) - Build tool and development server
 - [Redux](https://redux.js.org/) - For state management
 - [Radix UI](https://radix-ui.com/) - Low-level UI primitives
+- [Shadcn UI](https://ui.shadcn.com/) - A collection of UI components
+- [Framer Motion](https://www.framer.com/motion/) - For animations
