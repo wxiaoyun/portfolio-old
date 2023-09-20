@@ -1,25 +1,10 @@
 import React from "react";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
+import { fadeSlideInVariants } from "@/lib/variants";
 import { ToolMatrix } from "..";
-
-const sectionVariants: Variants = {
-	offscreen: {
-		y: 300,
-		opacity: 0,
-	},
-	onscreen: {
-		y: 0,
-		opacity: 1,
-		transition: {
-			type: "spring",
-			bounce: 0.1,
-			duration: 1.2,
-		},
-	},
-};
 
 export const AboutMe: React.FC = () => {
 	return (
@@ -63,7 +48,10 @@ export const AboutMe: React.FC = () => {
 				whileInView="onscreen"
 				viewport={{ once: true, amount: 0.8 }}
 			>
-				<motion.div variants={sectionVariants} className="flex flex-col gap-3">
+				<motion.div
+					variants={fadeSlideInVariants}
+					className="flex flex-col gap-3"
+				>
 					<div className="text-lg font-semibold w-full">
 						Tools and Technologies that I use
 					</div>
@@ -85,7 +73,7 @@ export const AboutMe: React.FC = () => {
 				viewport={{ once: true, amount: 0.8 }}
 			>
 				<motion.div
-					variants={sectionVariants}
+					variants={fadeSlideInVariants}
 					className="flex flex-col gap-3 items-start"
 				>
 					<div className="text-lg font-semibold">Personal Hobbies</div>
