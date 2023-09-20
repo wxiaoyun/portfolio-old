@@ -1,7 +1,23 @@
 import React from "react";
+import { motion, Variants } from "framer-motion";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
+import { ToolMatrix } from "..";
+
+const sectionVariants: Variants = {
+	offscreen: {
+		y: 300,
+	},
+	onscreen: {
+		y: 0,
+		transition: {
+			type: "spring",
+			bounce: 0.1,
+			duration: 1.2,
+		},
+	},
+};
 
 export const AboutMe: React.FC = () => {
 	return (
@@ -39,120 +55,41 @@ export const AboutMe: React.FC = () => {
 
 			<Separator orientation="horizontal" className="max-w-2xl" />
 
-			<div className="flex flex-col gap-3 max-w-2xl">
-				<div className="text-lg font-semibold">
-					Tools and Technologies that I use
-				</div>
-				<div className="grid grid-cols-12 gap-3">
-					<img
-						src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vim/vim-plain.svg"
-						alt="vim"
-						width="45"
-						height="45"
-					/>
-					<img
-						src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg"
-						alt="go"
-						width="45"
-						height="45"
-					/>
-					<img
-						src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-						alt="typescript"
-						width="45"
-						height="45"
-					/>
-					<img
-						src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-						alt="javascript"
-						width="45"
-						height="45"
-					/>
-					<img
-						src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
-						alt="java"
-						width="45"
-						height="45"
-					/>
-					<img
-						src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg"
-						alt="ruby"
-						width="45"
-						height="45"
-					/>
-					<img
-						src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-						alt="python"
-						width="45"
-						height="45"
-					/>
-					<img
-						src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-						alt="git"
-						width="45"
-						height="45"
-					/>
-					<img
-						src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-						alt="react"
-						width="45"
-						height="45"
-					/>
-					<img
-						src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
-						alt="redux"
-						width="45"
-						height="45"
-					/>
-					<img
-						src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-						alt="html"
-						width="45"
-						height="45"
-					/>
-					<img
-						src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-						alt="css"
-						width="45"
-						height="45"
-					/>
-					<img
-						src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
-						alt="tailwind"
-						width="45"
-						height="45"
-					/>
-					<img
-						src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-						alt="postgresql"
-						width="45"
-						height="45"
-					/>
-					<img
-						src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-						alt="mysql"
-						width="45"
-						height="45"
-					/>
-					<img
-						src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-original-wordmark.svg"
-						alt="rails"
-						width="45"
-						height="45"
-					/>
-				</div>
-			</div>
+			<motion.div
+				className="max-w-2xl w-full"
+				initial="offscreen"
+				whileInView="onscreen"
+				viewport={{ once: true, amount: 0.8 }}
+			>
+				<motion.div variants={sectionVariants} className="flex flex-col gap-3">
+					<div className="text-lg font-semibold w-full mb-8">
+						Tools and Technologies that I use
+					</div>
+
+					<ToolMatrix />
+				</motion.div>
+			</motion.div>
 
 			<Separator orientation="horizontal" className="max-w-2xl" />
 
-			<div className="flex flex-col gap-3 max-w-2xl">
-				<div className="text-lg font-semibold">Personal Hobbies</div>
+			<motion.div
+				className="max-w-2xl w-full"
+				initial="offscreen"
+				whileInView="onscreen"
+				viewport={{ once: true, amount: 0.8 }}
+			>
+				<motion.div
+					variants={sectionVariants}
+					className="flex flex-col gap-3 items-start"
+				>
+					<div className="text-lg font-semibold">Personal Hobbies</div>
 
-				<p className="leading-7 [&:not(:first-child)]:mt-6">
-					I enjoy playing drums and I am currently learning how to play golf. I
-					also a frequent gym visitor and I absolute love watching movies.
-				</p>
-			</div>
+					<p className="leading-7 [&:not(:first-child)]:mt-6">
+						I enjoy playing drums and I am currently learning how to play golf.
+						I also a frequent gym visitor and I absolute love watching movies.
+					</p>
+				</motion.div>
+			</motion.div>
 		</div>
 	);
 };
