@@ -8,26 +8,41 @@ import { Separator } from "@/components/ui/separator";
 export const Navbar: React.FC = () => {
 	const navigate = useNavigate();
 	return (
-		<div className="w-full flex flex-row justify-center gap-3 p-3 bg-background text-primary">
-			<Button onClick={() => navigate("/aboutme")} variant={"ghost"}>
+		<div className="w-full flex flex-row justify-around lg:justify-center gap-1 md:gap-3 p-3 bg-background text-primary">
+			<Button
+				onClick={() => navigate("/aboutme")}
+				variant={"ghost"}
+				size="sm"
+				className="text-xs md:text-lg px-1"
+			>
 				About Me
 			</Button>
 
 			<Separator orientation="vertical" />
 
-			<Button onClick={() => navigate("/experiences")} variant={"ghost"}>
+			<Button
+				onClick={() => navigate("/experiences")}
+				variant={"ghost"}
+				size="sm"
+				className="text-xs md:text-lg px-1"
+			>
 				Experiences
 			</Button>
 
 			<Separator orientation="vertical" />
 
-			<Button onClick={() => navigate("/projects")} variant={"ghost"}>
+			<Button
+				onClick={() => navigate("/projects")}
+				variant={"ghost"}
+				size="sm"
+				className="text-xs md:text-lg px-1"
+			>
 				Projects
 			</Button>
 
 			<Separator orientation="vertical" />
 
-			<Button variant={"ghost"}>
+			<Button variant={"ghost"} size="sm" className="text-xs md:text-lg px-1">
 				<a href="/WU_XIAOYUN_CV_v2.3.pdf" download>
 					Resume
 				</a>

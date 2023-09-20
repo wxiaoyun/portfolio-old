@@ -26,7 +26,7 @@ export const Cvwo: React.FC = () => {
 			className="max-w-2xl w-full"
 			initial="offscreen"
 			whileInView="onscreen"
-			viewport={{ once: true, amount: 0.6 }}
+			viewport={{ once: true, amount: 0.4 }}
 		>
 			<motion.div
 				variants={fadeSlideInVariants}

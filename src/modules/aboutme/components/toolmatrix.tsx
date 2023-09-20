@@ -28,12 +28,12 @@ const grid: { src: string; alt: string }[][] = [
 			src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
 			alt: "java",
 		},
+	],
+	[
 		{
 			src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg",
 			alt: "ruby",
 		},
-	],
-	[
 		{
 			src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
 			alt: "python",
@@ -50,6 +50,8 @@ const grid: { src: string; alt: string }[][] = [
 			src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
 			alt: "redux",
 		},
+	],
+	[
 		{
 			src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
 			alt: "html",
@@ -58,8 +60,6 @@ const grid: { src: string; alt: string }[][] = [
 			src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
 			alt: "css",
 		},
-	],
-	[
 		{
 			src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
 			alt: "tailwind",
@@ -72,6 +72,8 @@ const grid: { src: string; alt: string }[][] = [
 			src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
 			alt: "mysql",
 		},
+	],
+	[
 		{
 			src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-original-wordmark.svg",
 			alt: "rails",
