@@ -12,9 +12,10 @@ export const Tool: React.FC<{
 	y: MotionValue<number>;
 	size: number;
 	gap: number;
-	children: React.ReactNode;
-}> = ({ active, setActive, colIndex, rowIndex, x, y, size, gap, children }) => {
+	img: { src: string; alt: string };
+}> = ({ active, setActive, colIndex, rowIndex, x, y, size, gap, img }) => {
 	const isDragging = colIndex === active.col && rowIndex === active.row;
+
 	const d = distance(
 		{ x: active.col, y: active.row },
 		{ x: colIndex, y: rowIndex },
@@ -27,7 +28,7 @@ export const Tool: React.FC<{
 	const dy = useSpring(y, springConfig);
 
 	return (
-		<motion.div
+		<motion.img
 			drag
 			dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
 			dragTransition={{ bounceStiffness: 300, bounceDamping: 20 }}
@@ -43,8 +44,8 @@ export const Tool: React.FC<{
 				y: isDragging ? y : dy,
 				zIndex: isDragging ? 1 : 0,
 			}}
-		>
-			<div style={{ pointerEvents: "none" }}>{children}</div>
-		</motion.div>
+			src={img.src}
+			alt={img.alt}
+		/>
 	);
 };

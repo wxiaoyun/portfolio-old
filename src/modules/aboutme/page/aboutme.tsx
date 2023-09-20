@@ -8,9 +8,11 @@ import { ToolMatrix } from "..";
 const sectionVariants: Variants = {
 	offscreen: {
 		y: 300,
+		opacity: 0,
 	},
 	onscreen: {
 		y: 0,
+		opacity: 1,
 		transition: {
 			type: "spring",
 			bounce: 0.1,
@@ -62,9 +64,13 @@ export const AboutMe: React.FC = () => {
 				viewport={{ once: true, amount: 0.8 }}
 			>
 				<motion.div variants={sectionVariants} className="flex flex-col gap-3">
-					<div className="text-lg font-semibold w-full mb-8">
+					<div className="text-lg font-semibold w-full">
 						Tools and Technologies that I use
 					</div>
+
+					<p className="text-sm text-muted-foreground mb-8">
+						Try dragging the icons :P
+					</p>
 
 					<ToolMatrix />
 				</motion.div>
