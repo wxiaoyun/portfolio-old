@@ -42,6 +42,28 @@ export const Navbar: React.FC = () => {
 
 			<Separator orientation="vertical" />
 
+			<Button
+				onClick={() => navigate("/education")}
+				variant={"ghost"}
+				size="sm"
+				className="text-xs md:text-lg px-1"
+			>
+				Education
+			</Button>
+
+			<Separator orientation="vertical" />
+
+			<Button
+				onClick={() => navigate("/cca")}
+				variant={"ghost"}
+				size="sm"
+				className="text-xs md:text-lg px-1"
+			>
+				CCAs
+			</Button>
+
+			<Separator orientation="vertical" />
+
 			<Button variant={"ghost"} size="sm" className="text-xs md:text-lg px-1">
 				<a href="/WU_XIAOYUN_CV_v2.3.pdf" download>
 					Resume
