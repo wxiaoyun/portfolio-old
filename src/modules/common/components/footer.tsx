@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
 
   return (
     <div className="w-full flex flex-row justify-between p-4 bg-background text-primary">
-      <p className="text-sm text-muted-foreground break-words w-1/3">
+      <p className="text-sm text-muted-foreground break-words w-1/3 self-center">
         Icons from{" "}
         <a
           href="https://www.flaticon.com/"
