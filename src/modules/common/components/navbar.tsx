@@ -9,14 +9,14 @@ import { NavButton } from "./navbutton";
 export const Navbar: React.FC = () => {
   const navigate = useNavigate();
   return (
-    <div className="w-full flex flex-row justify-between md:justify-center gap-1 md:gap-3 p-3 bg-background text-primary">
+    <div className="w-full flex flex-row justify-between lg:justify-center lg:gap-3 p-3 bg-background text-primary">
       <NavButton />
 
       <Button
         onClick={() => navigate("/aboutme")}
         variant={"ghost"}
         size="sm"
-        className="hidden md:inline text-lg px-1"
+        className="hidden lg:inline text-lg"
       >
         About Me
       </Button>
@@ -27,7 +27,7 @@ export const Navbar: React.FC = () => {
         onClick={() => navigate("/experiences")}
         variant={"ghost"}
         size="sm"
-        className="hidden md:inline text-lg px-1"
+        className="hidden lg:inline text-lg"
       >
         Experiences
       </Button>
@@ -38,7 +38,7 @@ export const Navbar: React.FC = () => {
         onClick={() => navigate("/projects")}
         variant={"ghost"}
         size="sm"
-        className="hidden md:inline text-lg px-1"
+        className="hidden lg:inline text-lg"
       >
         Projects
       </Button>
@@ -49,7 +49,7 @@ export const Navbar: React.FC = () => {
         onClick={() => navigate("/education")}
         variant={"ghost"}
         size="sm"
-        className="hidden md:inline text-lg px-1"
+        className="hidden lg:inline text-lg"
       >
         Education
       </Button>
@@ -60,7 +60,7 @@ export const Navbar: React.FC = () => {
         onClick={() => navigate("/cca")}
         variant={"ghost"}
         size="sm"
-        className="hidden md:inline text-lg px-1"
+        className="hidden lg:inline text-lg"
       >
         CCAs
       </Button>
@@ -68,21 +68,21 @@ export const Navbar: React.FC = () => {
       <Separator orientation="vertical" />
 
       <Button
+        onClick={() => navigate("/blog")}
         variant={"ghost"}
         size="sm"
-        className="hidden md:inline text-lg px-1"
+        className="hidden lg:inline text-lg"
       >
+        Blogs
+      </Button>
+
+      <Separator orientation="vertical" />
+
+      <Button variant={"ghost"} size="sm" className="hidden lg:inline text-lg">
         <a href="/WU_XIAOYUN_CV_v2.3.pdf" download>
           Resume
         </a>
       </Button>
-
-      {/* TODO:  */}
-      {/* <Separator orientation="vertical" />
-
-			<Button onClick={() => navigate("/blog")} variant={"ghost"}>
-				Blog
-			</Button> */}
 
       <Separator orientation="vertical" />
 
