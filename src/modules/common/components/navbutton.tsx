@@ -16,7 +16,7 @@ export const NavButton: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <NavigationMenu className="md:hidden">
+    <NavigationMenu className="lg:hidden">
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger>
@@ -31,7 +31,7 @@ export const NavButton: React.FC = () => {
                     onClick={() => navigate("/aboutme")}
                     variant={"ghost"}
                     size="sm"
-                    className="text-lg px-1"
+                    className="text-lg"
                   >
                     About Me
                   </Button>
@@ -44,7 +44,7 @@ export const NavButton: React.FC = () => {
                     onClick={() => navigate("/experiences")}
                     variant={"ghost"}
                     size="sm"
-                    className="text-lg px-1"
+                    className="text-lg"
                   >
                     Experiences
                   </Button>
@@ -57,7 +57,7 @@ export const NavButton: React.FC = () => {
                     onClick={() => navigate("/projects")}
                     variant={"ghost"}
                     size="sm"
-                    className="text-lg px-1"
+                    className="text-lg"
                   >
                     Projects
                   </Button>
@@ -70,7 +70,7 @@ export const NavButton: React.FC = () => {
                     onClick={() => navigate("/education")}
                     variant={"ghost"}
                     size="sm"
-                    className="text-lg px-1"
+                    className="text-lg"
                   >
                     Education
                   </Button>
@@ -83,7 +83,7 @@ export const NavButton: React.FC = () => {
                     onClick={() => navigate("/cca")}
                     variant={"ghost"}
                     size="sm"
-                    className="text-lg px-1"
+                    className="text-lg"
                   >
                     CCAs
                   </Button>
@@ -93,10 +93,19 @@ export const NavButton: React.FC = () => {
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <Button
+                    onClick={() => navigate("/blog")}
                     variant={"ghost"}
                     size="sm"
-                    className="text-lg px-1"
+                    className="text-lg"
                   >
+                    Blogs
+                  </Button>
+                </NavigationMenuLink>
+              </li>
+
+              <li className="row-span-3">
+                <NavigationMenuLink asChild>
+                  <Button variant={"ghost"} size="sm" className="text-lg">
                     <a href="/WU_XIAOYUN_CV_v2.3.pdf" download>
                       Resume
                     </a>
