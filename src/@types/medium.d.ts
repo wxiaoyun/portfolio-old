@@ -1,7 +1,7 @@
 interface MediumData {
   status: string;
   feed: MediumFeed;
-  items: MediumFeedItem[];
+  items: MediumItem[];
 }
 
 interface MediumFeed {
@@ -13,7 +13,7 @@ interface MediumFeed {
   image: string;
 }
 
-interface MediumFeedItem {
+interface MediumItem {
   title: string;
   pubDate: string;
   link: string;
@@ -24,4 +24,10 @@ interface MediumFeedItem {
   content: string;
   enclosure: unknown;
   categories: string[];
+}
+
+interface BlogState {
+  data?: MediumData;
+  isLoading: boolean;
+  hasFetched: boolean;
 }

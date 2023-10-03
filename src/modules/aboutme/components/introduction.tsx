@@ -5,6 +5,13 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { fadeSlideInVariants } from "@/lib/variants";
 
 export const Introduction: React.FC = () => {
+	const [src, setSrc] = React.useState("/self_portrait_low_res.jpg");
+
+	React.useEffect(() => {
+		const highResImage = new Image();
+		highResImage.src = "/self_portrait_zoomed.JPEG";
+		highResImage.onload = () => setSrc("/self_portrait_zoomed.JPEG");
+	}, []);
 	return (
 		<motion.div
 			className="max-w-2xl w-full"
@@ -14,11 +21,11 @@ export const Introduction: React.FC = () => {
 		>
 			<motion.div
 				variants={fadeSlideInVariants}
-				className="h-[70vh] mt-[10vh] flex flex-col justify-center items-center max-w-2xl gap-6"
+				className="h-[80vh] mt-[10vh] flex flex-col justify-center items-center max-w-2xl gap-6"
 			>
 				<div className="flex w-full justify-around items-center gap-6">
 					<Avatar className="h-52 w-52 shadow-xl">
-						<AvatarImage src="/self_portrait_zoomed.JPEG" alt="portrait" />
+						<AvatarImage src={src} alt="portrait" />
 						<AvatarFallback></AvatarFallback>
 					</Avatar>
 					<div>
