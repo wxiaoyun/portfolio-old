@@ -26,8 +26,9 @@ interface MediumItem {
   categories: string[];
 }
 
+type BlogFetchStatus = "idle" | "loading" | "succeeded" | "failed";
+
 interface BlogState {
   data?: MediumData;
-  isLoading: boolean;
-  hasFetched: boolean;
+  fetchState: BlogFetchStatus;
 }

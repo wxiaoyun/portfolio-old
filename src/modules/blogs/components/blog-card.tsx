@@ -24,7 +24,7 @@ export const BlogCard: React.FC<{ item: MediumItem }> = ({ item }) => {
   const firstParagraph = paragraphs[0].textContent;
   return (
     <motion.div
-      className="max-w-2xl w-full mb-24"
+      className="w-full"
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.4 }}
@@ -33,7 +33,7 @@ export const BlogCard: React.FC<{ item: MediumItem }> = ({ item }) => {
         <Card>
           <CardHeader>
             <a href={item.guid}>
-              <CardTitle className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
+              <CardTitle className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0 hover:underline">
                 {item.title}
               </CardTitle>
 

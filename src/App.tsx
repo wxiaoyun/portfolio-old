@@ -7,16 +7,16 @@ import { Router } from "./router";
 import { store } from "./store";
 
 const App: React.FC = () => {
-	return (
-		<Provider store={store}>
-			<ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-				<RouterProvider
-					router={Router}
-					fallbackElement={<p>Page unavailable</p>}
-				/>
-			</ThemeProvider>
-		</Provider>
-	);
+  return (
+    <Provider store={store}>
+      <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
+        <RouterProvider
+          router={Router}
+          fallbackElement={<p>Page unavailable</p>}
+        />
+      </ThemeProvider>
+    </Provider>
+  );
 };
 
 export default App;
