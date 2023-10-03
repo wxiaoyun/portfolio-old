@@ -14,14 +14,14 @@ export const Introduction: React.FC = () => {
 	}, []);
 	return (
 		<motion.div
-			className="max-w-2xl w-full"
+			className="w-full"
 			initial="offscreen"
 			whileInView="onscreen"
 			viewport={{ once: true, amount: 0.4 }}
 		>
 			<motion.div
 				variants={fadeSlideInVariants}
-				className="h-[80vh] mt-[10vh] flex flex-col justify-center items-center max-w-2xl gap-6"
+				className="h-[80vh] mt-[10vh] flex flex-col justify-center items-center gap-6"
 			>
 				<div className="flex w-full justify-around items-center gap-6">
 					<Avatar className="h-52 w-52 shadow-xl">

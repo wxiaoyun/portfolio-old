@@ -3,7 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export const BlogMe: React.FC<{ feed: MediumFeed }> = ({ feed }) => {
   return (
-    <div className="max-w-2xl w-full flex flex-row gap-3 justify-start items-center">
+    <div className="w-full flex flex-row gap-3 justify-start items-center">
       <a href={feed.link} target="_blank" rel="noopener noreferrer">
         <Avatar>
           <AvatarImage src={feed.image} alt={feed.description} />

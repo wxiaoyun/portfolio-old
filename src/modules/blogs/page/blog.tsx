@@ -11,8 +11,9 @@ export const Blog: React.FC = () => {
   React.useEffect(() => {
     const timeoutID = setTimeout(() => {
       // delay skeleton for faster preceived load
-      if (!blogState.hasFetched) dispatch(blogSlice.actions.setLoading(true));
-    }, 500);
+      if (blogState.fetchState === "idle")
+        dispatch(blogSlice.actions.setFetchState("loading"));
+    }, 300);
 
     dispatch(fetchMediumData());
 
@@ -21,27 +22,24 @@ export const Blog: React.FC = () => {
   }, []); // only run on mount
 
   return (
-    <div className="flex flex-col gap-y-12 items-center mx-6">
-      <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl justify-self-start max-w-2xl w-full">
+    <div className="flex flex-col gap-y-12 items-center mx-6 w-full">
+      <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl self-start">
         Blogs
       </h1>
 
       {/* Loading Skeleton */}
-      {blogState.isLoading ? (
+      {blogState.fetchState === "loading" ? (
         new Array(3).fill(0).map((_, index) => <BlogSkeleton key={index} />)
-      ) : (
+      ) : blogState.fetchState === "succeeded" ? (
         <>
           <BlogMe feed={blogState.data!.feed} />
           {blogState.data!.items.map((item) => (
             <BlogCard key={item.guid} item={item} />
           ))}
         </>
-      )}
-
-      {/* Finished loading yet data is still not fetched */}
-      {!blogState.isLoading && !blogState.hasFetched && (
+      ) : blogState.fetchState === "failed" ? (
         <p className="text-gray-500 text-center">Failed to fetch blogs</p>
-      )}
+      ) : null}
     </div>
   );
 };

@@ -11,7 +11,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 export const BlogSkeleton: React.FC = () => {
   return (
-    <Card className="max-w-2xl w-full">
+    <Card className="w-full">
       <CardHeader className="flex flex-col gap-3">
         <CardTitle className="flex flex-col gap-3">
           <Skeleton className="h-12 w-full rounded-md" />

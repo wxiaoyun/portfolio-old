@@ -22,7 +22,7 @@ export const CvwoExco: React.FC = () => {
 
 	return (
 		<motion.div
-			className="max-w-2xl w-full"
+			className="w-full"
 			initial="offscreen"
 			whileInView="onscreen"
 			viewport={{ once: true, amount: 0.4 }}
