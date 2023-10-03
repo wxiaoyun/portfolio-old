@@ -17,7 +17,7 @@ TimeAgo.addDefaultLocale(en);
 
 const timeAgo = new TimeAgo("en-US");
 
-export const BlogCard: React.FC<{ item: MediumFeedItem }> = ({ item }) => {
+export const BlogCard: React.FC<{ item: MediumItem }> = ({ item }) => {
   const parser = new DOMParser();
   const apiContent = parser.parseFromString(item.content, "text/html");
   const paragraphs = apiContent.getElementsByTagName("p");

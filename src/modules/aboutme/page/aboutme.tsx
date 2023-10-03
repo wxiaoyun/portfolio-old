@@ -5,7 +5,7 @@ import { Introduction, ToolsAndTech, Hobbies } from "../components/";
 
 export const AboutMe: React.FC = () => {
   return (
-    <div className="flex flex-col gap-y-24 items-center mx-6">
+    <div className="flex flex-col gap-y-12 items-center mx-6">
       <Introduction />
 
       <Separator orientation="horizontal" className="max-w-2xl" />
