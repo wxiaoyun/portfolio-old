@@ -50,7 +50,7 @@ export const PortfolioPage: React.FC = () => {
               <AccordionContent>
                 <CardContent>
                   <div className="flex flex-col gap-6">
-                    <p className="text-sm text-muted-foreground">
+                    <p className="leading-7">
                       A personal web-based responsive portfolio project
                       developed using modern web technologies. Built largely
                       with React and TypeScript, this portfolio serves as a
@@ -58,9 +58,9 @@ export const PortfolioPage: React.FC = () => {
                       front-end development.
                     </p>
 
-                    <Separator orientation="horizontal" className="max-w-2xl" />
+                    <Separator orientation="horizontal"/>
 
-                    <p className="text-sm text-muted-foreground">
+                    <p className="leading-7">
                       This project effectively employs a variety of cutting-edge
                       tools in its build process, including Tailwind for
                       utility-first CSS, Vite as the build tool and development

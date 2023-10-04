@@ -13,16 +13,17 @@ import {
   CCA,
   Blog,
 } from "../modules";
+import { Routes } from "./routes";
 
 export const Router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      <Route path="/aboutme" element={<AboutMe />} />
-      <Route path="/experiences" element={<Experience />} />
-      <Route path="/projects" element={<Project />} />
-      <Route path="/education" element={<Education />} />
-      <Route path="/cca" element={<CCA />} />
-      <Route path="/blog" element={<Blog />} />
+      <Route path={`/${Routes.aboutme}`} element={<AboutMe />} />
+      <Route path={`/${Routes.experience}`} element={<Experience />} />
+      <Route path={`/${Routes.project}`} element={<Project />} />
+      <Route path={`/${Routes.education}`} element={<Education />} />
+      <Route path={`/${Routes.cca}`} element={<CCA />} />
+      <Route path={`/${Routes.blog}`} element={<Blog />} />
       <Route path="*" element={<PageNotFound />} />
     </Route>,
   ),

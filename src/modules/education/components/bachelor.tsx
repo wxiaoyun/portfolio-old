@@ -60,7 +60,7 @@ export const Bachelor: React.FC = () => {
                       GPA: 4.68/5.0
                     </p>
 
-                    <Separator orientation="horizontal" className="max-w-2xl" />
+                    <Separator orientation="horizontal"/>
 
                     <h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
                       Relevant Coursework:

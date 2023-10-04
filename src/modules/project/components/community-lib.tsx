@@ -55,7 +55,7 @@ export const CommunityLib: React.FC = () => {
 											UserInterface to let the locals use ourlibrary with ease.
 										</p>
 
-										<Separator orientation="horizontal" className="max-w-2xl" />
+										<Separator orientation="horizontal"/>
 
 										<h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
 											Backend Developer:
@@ -73,7 +73,7 @@ export const CommunityLib: React.FC = () => {
 											</li>
 										</ul>
 
-										<Separator orientation="horizontal" className="max-w-2xl" />
+										<Separator orientation="horizontal"/>
 
 										<h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
 											Frontend Developer:
