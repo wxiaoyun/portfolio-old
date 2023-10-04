@@ -83,7 +83,7 @@ export const Cvwo: React.FC = () => {
 											</li>
 										</ul>
 
-										<Separator orientation="horizontal"/>
+										<Separator orientation="horizontal" />
 
 										<h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
 											Frontend Developer:
@@ -98,7 +98,7 @@ export const Cvwo: React.FC = () => {
 											</li>
 										</ul>
 
-										<Separator orientation="horizontal"/>
+										<Separator orientation="horizontal" />
 
 										<h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
 											Secretary:
@@ -107,14 +107,14 @@ export const Cvwo: React.FC = () => {
 										<ul>
 											<li className="list-disc list-inside">
 												<p className="inline">
-													Assist in coordinating actions 5 teams of total 32
-													engineers. Coordinating with external parties,
-													managing resources and meeting minute taking.
+													Assist in coordinating actions between 5 teams and a
+													total of 32 engineers. Coordinating with external
+													parties, managing resources and meeting minute taking.
 												</p>
 											</li>
 										</ul>
 
-										<Separator orientation="horizontal"/>
+										<Separator orientation="horizontal" />
 
 										<h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
 											Deputy Team Lead:
