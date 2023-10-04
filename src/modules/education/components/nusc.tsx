@@ -2,7 +2,6 @@ import React from "react";
 
 import { motion } from "framer-motion";
 import { fadeSlideInVariants } from "@/lib/variants";
-import { Separator } from "@/components/ui/separator";
 import {
   Card,
   CardDescription,
@@ -39,8 +38,6 @@ export const NUSCollege: React.FC = () => {
                     alt="National University of Singapore Logo"
                     className="w-full px-6 mb-6"
                   />
-
-                  <Separator orientation="horizontal"/>
 
                   <CardTitle>NUS Undergraduate Honours College</CardTitle>
 
