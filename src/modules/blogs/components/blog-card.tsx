@@ -32,7 +32,7 @@ export const BlogCard: React.FC<{ item: MediumItem }> = ({ item }) => {
       <motion.div variants={fadeSlideInVariants}>
         <Card>
           <CardHeader>
-            <a href={item.guid}>
+            <a href={item.guid} rel="noopener noreferrer" target="_blank">
               <CardTitle className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0 hover:underline">
                 {item.title}
               </CardTitle>
