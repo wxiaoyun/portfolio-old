@@ -87,7 +87,7 @@ export const Navbar: React.FC = () => {
       </Button>
 
       <Button variant={"ghost"} size="sm" className="hidden lg:inline text-lg">
-        <a href="/WU_XIAOYUN_CV_v2.3.pdf" download>
+        <a href="/WU_XIAOYUN_CV_v2.5.pdf" download>
           Resume
         </a>
       </Button>
