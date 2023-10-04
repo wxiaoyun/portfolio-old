@@ -35,7 +35,7 @@ export const NUSCollege: React.FC = () => {
                 <CardHeader className="text-left">
                   <img
                     src="NUS_College_Logo.png"
-                    alt="National University of Singapore Logo"
+                    alt="NUS College Logo"
                     className="w-full px-6 mb-6"
                   />
 

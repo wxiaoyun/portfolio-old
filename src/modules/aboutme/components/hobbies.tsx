@@ -19,7 +19,7 @@ export const Hobbies: React.FC = () => {
 
         <p className="leading-7 [&:not(:first-child)]:mt-6">
           I enjoy playing drums and I am currently learning how to play golf. I
-          passionate about working out and I absolutely love watching movies.
+          am passionate about working out and I absolutely love watching movies.
         </p>
       </motion.div>
     </motion.div>
