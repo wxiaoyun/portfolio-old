@@ -11,6 +11,7 @@ import {
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import { Routes } from "@/router";
 
 export const NavButton: React.FC = () => {
   const navigate = useNavigate();
@@ -28,7 +29,7 @@ export const NavButton: React.FC = () => {
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <Button
-                    onClick={() => navigate("/aboutme")}
+                    onClick={() => navigate(`/${Routes.aboutme}`)}
                     variant={"ghost"}
                     size="sm"
                     className="text-lg"
@@ -41,12 +42,12 @@ export const NavButton: React.FC = () => {
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <Button
-                    onClick={() => navigate("/experiences")}
+                    onClick={() => navigate(`/${Routes.experience}`)}
                     variant={"ghost"}
                     size="sm"
                     className="text-lg"
                   >
-                    Experiences
+                    Experience
                   </Button>
                 </NavigationMenuLink>
               </li>
@@ -54,12 +55,12 @@ export const NavButton: React.FC = () => {
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <Button
-                    onClick={() => navigate("/projects")}
+                    onClick={() => navigate(`/${Routes.project}`)}
                     variant={"ghost"}
                     size="sm"
                     className="text-lg"
                   >
-                    Projects
+                    Project
                   </Button>
                 </NavigationMenuLink>
               </li>
@@ -67,7 +68,7 @@ export const NavButton: React.FC = () => {
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <Button
-                    onClick={() => navigate("/education")}
+                    onClick={() => navigate(`/${Routes.education}`)}
                     variant={"ghost"}
                     size="sm"
                     className="text-lg"
@@ -80,12 +81,12 @@ export const NavButton: React.FC = () => {
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <Button
-                    onClick={() => navigate("/cca")}
+                    onClick={() => navigate(`/${Routes.cca}`)}
                     variant={"ghost"}
                     size="sm"
                     className="text-lg"
                   >
-                    CCAs
+                    CCA
                   </Button>
                 </NavigationMenuLink>
               </li>
@@ -93,24 +94,22 @@ export const NavButton: React.FC = () => {
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <Button
-                    onClick={() => navigate("/blog")}
+                    onClick={() => navigate(`/${Routes.blog}`)}
                     variant={"ghost"}
                     size="sm"
                     className="text-lg"
                   >
-                    Blogs
+                    Blog
                   </Button>
                 </NavigationMenuLink>
               </li>
 
               <li className="row-span-3">
-                <NavigationMenuLink asChild>
-                  <Button variant={"ghost"} size="sm" className="text-lg">
-                    <a href="/WU_XIAOYUN_CV_v2.3.pdf" download>
-                      Resume
-                    </a>
-                  </Button>
-                </NavigationMenuLink>
+                <Button variant={"ghost"} size="sm" className="text-lg">
+                  <a href="/WU_XIAOYUN_CV_v2.3.pdf" download>
+                    Resume
+                  </a>
+                </Button>
               </li>
             </ul>
           </NavigationMenuContent>

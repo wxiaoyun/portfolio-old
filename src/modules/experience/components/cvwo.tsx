@@ -83,7 +83,7 @@ export const Cvwo: React.FC = () => {
 											</li>
 										</ul>
 
-										<Separator orientation="horizontal" className="max-w-2xl" />
+										<Separator orientation="horizontal"/>
 
 										<h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
 											Frontend Developer:
@@ -98,7 +98,7 @@ export const Cvwo: React.FC = () => {
 											</li>
 										</ul>
 
-										<Separator orientation="horizontal" className="max-w-2xl" />
+										<Separator orientation="horizontal"/>
 
 										<h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
 											Secretary:
@@ -114,7 +114,7 @@ export const Cvwo: React.FC = () => {
 											</li>
 										</ul>
 
-										<Separator orientation="horizontal" className="max-w-2xl" />
+										<Separator orientation="horizontal"/>
 
 										<h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
 											Deputy Team Lead:

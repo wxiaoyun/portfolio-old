@@ -40,7 +40,7 @@ export const NUSCollege: React.FC = () => {
                     className="w-full px-6 mb-6"
                   />
 
-                  <Separator orientation="horizontal" className="max-w-2xl" />
+                  <Separator orientation="horizontal"/>
 
                   <CardTitle>NUS Undergraduate Honours College</CardTitle>
 

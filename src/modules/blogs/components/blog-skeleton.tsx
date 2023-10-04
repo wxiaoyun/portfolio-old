@@ -2,10 +2,8 @@ import React from "react";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 
@@ -13,14 +11,14 @@ export const BlogSkeleton: React.FC = () => {
   return (
     <Card className="w-full">
       <CardHeader className="flex flex-col gap-3">
-        <CardTitle className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3">
           <Skeleton className="h-12 w-full rounded-md" />
           <Skeleton className="h-12 w-[40%] rounded-md" />
-        </CardTitle>
+        </div>
 
-        <CardDescription>
+        <div>
           <Skeleton className="h-6 w-[20%] rounded-md" />
-        </CardDescription>
+        </div>
       </CardHeader>
 
       <CardContent className="flex flex-col gap-3">

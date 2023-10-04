@@ -3,88 +3,94 @@ import { useNavigate } from "react-router-dom";
 
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/mode-toggle";
-import { Separator } from "@/components/ui/separator";
 import { NavButton } from "./navbutton";
+import { Routes } from "@/router";
+
+const dynamicClass = (path: string, current: string) => {
+  return path === current ? "bg-accent text-accent-foreground" : "";
+};
 
 export const Navbar: React.FC = () => {
   const navigate = useNavigate();
+  const path = window.location.pathname.split("/")[1];
   return (
-    <div className="w-full flex flex-row justify-between lg:justify-center lg:gap-3 p-3 bg-background text-primary">
+    <div className="w-full flex flex-row justify-between lg:justify-center lg:gap-3 p-3">
       <NavButton />
 
       <Button
-        onClick={() => navigate("/aboutme")}
+        onClick={() => navigate(`/${Routes.aboutme}`)}
         variant={"ghost"}
         size="sm"
-        className="hidden lg:inline text-lg"
+        className={`hidden lg:inline text-lg ${dynamicClass(
+          path,
+          Routes.aboutme,
+        )}`}
       >
         About Me
       </Button>
 
-      <Separator orientation="vertical" />
-
       <Button
-        onClick={() => navigate("/experiences")}
+        onClick={() => navigate(`/${Routes.experience}`)}
         variant={"ghost"}
         size="sm"
-        className="hidden lg:inline text-lg"
+        className={`hidden lg:inline text-lg ${dynamicClass(
+          path,
+          Routes.experience,
+        )}`}
       >
         Experiences
       </Button>
 
-      <Separator orientation="vertical" />
-
       <Button
-        onClick={() => navigate("/projects")}
+        onClick={() => navigate(`/${Routes.project}`)}
         variant={"ghost"}
         size="sm"
-        className="hidden lg:inline text-lg"
+        className={`hidden lg:inline text-lg ${dynamicClass(
+          path,
+          Routes.project,
+        )}`}
       >
         Projects
       </Button>
 
-      <Separator orientation="vertical" />
-
       <Button
-        onClick={() => navigate("/education")}
+        onClick={() => navigate(`/${Routes.education}`)}
         variant={"ghost"}
         size="sm"
-        className="hidden lg:inline text-lg"
+        className={`hidden lg:inline text-lg ${dynamicClass(
+          path,
+          Routes.education,
+        )}`}
       >
         Education
       </Button>
 
-      <Separator orientation="vertical" />
-
       <Button
-        onClick={() => navigate("/cca")}
+        onClick={() => navigate(`/${Routes.cca}`)}
         variant={"ghost"}
         size="sm"
-        className="hidden lg:inline text-lg"
+        className={`hidden lg:inline text-lg ${dynamicClass(path, Routes.cca)}`}
       >
         CCAs
       </Button>
 
-      <Separator orientation="vertical" />
-
       <Button
-        onClick={() => navigate("/blog")}
+        onClick={() => navigate(`/${Routes.blog}`)}
         variant={"ghost"}
         size="sm"
-        className="hidden lg:inline text-lg"
+        className={`hidden lg:inline text-lg ${dynamicClass(
+          path,
+          Routes.blog,
+        )}`}
       >
         Blogs
       </Button>
-
-      <Separator orientation="vertical" />
 
       <Button variant={"ghost"} size="sm" className="hidden lg:inline text-lg">
         <a href="/WU_XIAOYUN_CV_v2.3.pdf" download>
           Resume
         </a>
       </Button>
-
-      <Separator orientation="vertical" />
 
       <ModeToggle />
     </div>

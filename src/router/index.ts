@@ -1,1 +1,2 @@
-export * from "./route.tsx";
+export * from "./route";
+export * from "./routes";

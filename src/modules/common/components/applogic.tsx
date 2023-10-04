@@ -1,7 +1,14 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate  } from "react-router-dom";
 
 export const AppLogic: React.FC = () => {
+  const navigate = useNavigate();
+
+  React.useEffect(() => {
+    if (window.location.pathname === "/") navigate("/aboutme");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return <Outlet />;
 };
 
