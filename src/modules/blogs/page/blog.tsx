@@ -29,7 +29,7 @@ export const Blog: React.FC = () => {
   }, []); // only run on mount
 
   return (
-     <motion.div
+    <motion.div
       className="flex flex-col gap-y-12 items-center mx-6 w-full"
       variants={slideVariants}
       custom={routeState.direction}

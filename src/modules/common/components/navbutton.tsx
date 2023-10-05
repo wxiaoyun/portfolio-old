@@ -10,12 +10,11 @@ import {
 } from "@/components/ui/navigation-menu";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
 import { Routes } from "@/router";
 
-export const NavButton: React.FC = () => {
-  const navigate = useNavigate();
-
+export const NavButton: React.FC<{ nav: (path: string) => void }> = ({
+  nav,
+}) => {
   return (
     <NavigationMenu className="lg:hidden">
       <NavigationMenuList>
@@ -29,7 +28,7 @@ export const NavButton: React.FC = () => {
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <Button
-                    onClick={() => navigate(`/${Routes.aboutme}`)}
+                    onClick={() => nav(Routes.aboutme)}
                     variant={"ghost"}
                     size="sm"
                     className="text-lg"
@@ -42,7 +41,7 @@ export const NavButton: React.FC = () => {
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <Button
-                    onClick={() => navigate(`/${Routes.experience}`)}
+                    onClick={() => nav(Routes.experience)}
                     variant={"ghost"}
                     size="sm"
                     className="text-lg"
@@ -55,7 +54,7 @@ export const NavButton: React.FC = () => {
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <Button
-                    onClick={() => navigate(`/${Routes.project}`)}
+                    onClick={() => nav(Routes.project)}
                     variant={"ghost"}
                     size="sm"
                     className="text-lg"
@@ -68,7 +67,7 @@ export const NavButton: React.FC = () => {
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <Button
-                    onClick={() => navigate(`/${Routes.education}`)}
+                    onClick={() => nav(Routes.education)}
                     variant={"ghost"}
                     size="sm"
                     className="text-lg"
@@ -81,7 +80,7 @@ export const NavButton: React.FC = () => {
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <Button
-                    onClick={() => navigate(`/${Routes.cca}`)}
+                    onClick={() => nav(Routes.cca)}
                     variant={"ghost"}
                     size="sm"
                     className="text-lg"
@@ -94,7 +93,7 @@ export const NavButton: React.FC = () => {
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <Button
-                    onClick={() => navigate(`/${Routes.blog}`)}
+                    onClick={() => nav(Routes.blog)}
                     variant={"ghost"}
                     size="sm"
                     className="text-lg"
