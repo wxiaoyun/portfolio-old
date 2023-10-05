@@ -7,17 +7,19 @@ import {
   CardHeader,
 } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
+import { fadeInAnimation } from "@/lib/animation";
 
 export const BlogSkeleton: React.FC = () => {
   return (
     <motion.div
-      initial={{ opacity: 1, height: "auto" }}
+      initial={{ opacity: 0, height: "auto" }}
       exit={{
         zIndex: -1,
         height: 0,
         opacity: 0,
         y: "-30vh",
       }}
+      animate={fadeInAnimation}
       transition={{
         duration: 1,
         type: "spring",

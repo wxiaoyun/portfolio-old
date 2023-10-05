@@ -6,7 +6,7 @@ import { Introduction, ToolsAndTech, Hobbies } from "../components/";
 import { slideVariants } from "@/lib/variants";
 import { useSelector } from "react-redux";
 import { RootState } from "@/store";
-import { slideTransition } from "@/lib/transition";
+import { slideFadeTransition } from "@/lib/transition";
 
 export const AboutMe: React.FC = () => {
   const routeState = useSelector((state: RootState) => state.route);
@@ -18,7 +18,7 @@ export const AboutMe: React.FC = () => {
       initial="enter"
       animate="center"
       exit="exit"
-      transition={slideTransition}
+      transition={slideFadeTransition}
     >
       <Introduction />
 

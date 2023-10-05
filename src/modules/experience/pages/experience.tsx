@@ -5,7 +5,7 @@ import { slideVariants } from "@/lib/variants";
 import { useSelector } from "react-redux";
 import { RootState } from "@/store";
 import { Cvwo } from "..";
-import { slideTransition } from "@/lib/transition";
+import { slideFadeTransition } from "@/lib/transition";
 
 export const Experience: React.FC = () => {
     const routeState = useSelector((state: RootState) => state.route);
@@ -17,7 +17,7 @@ export const Experience: React.FC = () => {
             initial="enter"
             animate="center"
             exit="exit"
-            transition={slideTransition}
+            transition={slideFadeTransition}
         >
             <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl self-start">
                 Experiences
