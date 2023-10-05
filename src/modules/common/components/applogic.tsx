@@ -22,20 +22,20 @@ export const AppLogic: React.FC = () => {
 
   return (
     <div className="relative w-full">
-      <AnimatePresence custom={routeState.direction}>
-        <motion.div
-          className="absolute top-0 w-full"
-          variants={slideVariants}
-          custom={routeState.direction}
-          initial="enter"
-          animate="center"
-          exit="exit"
-          transition={slideTransition}
-          key={location.key}
-        >
+      {/* <AnimatePresence custom={routeState.direction}> */}
+      {/*   <motion.div */}
+      {/*     className="absolute top-0 w-full" */}
+      {/*     variants={slideVariants} */}
+      {/*     custom={routeState.direction} */}
+      {/*     initial="enter" */}
+      {/*     animate="center" */}
+      {/*     exit="exit" */}
+      {/*     transition={slideTransition} */}
+      {/*     key={location.key} */}
+      {/*   > */}
           <Outlet />
-        </motion.div>
-      </AnimatePresence>
+      {/*   </motion.div> */}
+      {/* </AnimatePresence> */}
     </div>
   );
 };
