@@ -11,8 +11,9 @@ export const routeSlice = createSlice({
   initialState,
   reducers: {
     changeRoute: (state, action: PayloadAction<string>) => {
+      if (action.payload === state.currentPath) return;
       const currentIndex = RouteArray.findIndex(
-        (route) =>  route === state.currentPath,
+        (route) => route === state.currentPath,
       );
       const nextIndex = RouteArray.findIndex(
         (route) => route === action.payload,

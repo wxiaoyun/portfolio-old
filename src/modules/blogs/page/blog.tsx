@@ -1,18 +1,13 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "@/store";
 import { blogSlice, fetchMediumData } from "@/store/slices";
 import { BlogSkeleton, BlogCard, BlogMe } from "../components/";
 import { Centred } from "@/modules";
-import { slideVariants } from "@/lib/variants";
-import { slideTransition } from "@/lib/transition";
-import { Routes } from "@/router";
 
 export const Blog: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
   const blogState = useSelector((state: RootState) => state.blog);
-  const routeState = useSelector((state: RootState) => state.route);
 
   React.useEffect(() => {
     if (blogState.data) return; // already fetched data
@@ -30,16 +25,7 @@ export const Blog: React.FC = () => {
   }, []); // only run on mount
 
   return (
-     <motion.div
-      className="flex flex-col gap-y-12 items-center mx-6 w-full"
-      variants={slideVariants}
-      custom={routeState.direction}
-      initial="enter"
-      animate="center"
-      exit="exit"
-      transition={slideTransition}
-      key={Routes.blog}
-    >
+    <div className="flex flex-col gap-y-12 items-center mx-6 w-full">
       <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl self-start">
         Blogs
       </h1>
@@ -65,7 +51,7 @@ export const Blog: React.FC = () => {
           ))}
         </>
       )}
-    </motion.div>
+    </div>
   );
 };
 

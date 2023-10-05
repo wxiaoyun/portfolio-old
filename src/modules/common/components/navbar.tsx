@@ -17,8 +17,9 @@ export const Navbar: React.FC = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const animatedNav = (path: string) => {
-      dispatch(routeSlice.actions.changeRoute(path));
-      navigate(`/${path}`);
+    if (window.location.pathname === `/${path}`) return;
+    dispatch(routeSlice.actions.changeRoute(path));
+    navigate(`/${path}`);
   };
 
   const path = window.location.pathname.split("/")[1];
