@@ -12,7 +12,7 @@ export const fetchMediumData = createAsyncThunk(
       fetch(
         "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@w.xy020203",
       ),
-      new Promise((resolve) => setTimeout(resolve, 1000)),
+      new Promise((resolve) => setTimeout(resolve, 2000)),
     ]); // Simulate loading
     const data = await response.json();
     return data;
