@@ -1,87 +1,81 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/mode-toggle";
-import { NavButton } from "./navbutton";
 import { Routes } from "@/router";
+import { routeSlice } from "@/store";
+import { NavButton } from "./navbutton";
 
 const dynamicClass = (path: string, current: string) => {
-  return path === current ? "bg-accent text-accent-foreground" : "";
+  return `hidden lg:inline text-lg ${path === current && "bg-accent text-accent-foreground"
+    }`;
 };
 
 export const Navbar: React.FC = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const animatedNav = (path: string) => {
+      dispatch(routeSlice.actions.changeRoute(path));
+      navigate(`/${path}`);
+  };
+
   const path = window.location.pathname.split("/")[1];
   return (
     <div className="w-full flex flex-row justify-between lg:justify-center lg:gap-3 p-3">
       <NavButton />
 
       <Button
-        onClick={() => navigate(`/${Routes.aboutme}`)}
+        onClick={() => animatedNav(Routes.aboutme)}
         variant={"ghost"}
         size="sm"
-        className={`hidden lg:inline text-lg ${dynamicClass(
-          path,
-          Routes.aboutme,
-        )}`}
+        className={dynamicClass(path, Routes.aboutme)}
       >
         About Me
       </Button>
 
       <Button
-        onClick={() => navigate(`/${Routes.experience}`)}
+        onClick={() => animatedNav(Routes.experience)}
         variant={"ghost"}
         size="sm"
-        className={`hidden lg:inline text-lg ${dynamicClass(
-          path,
-          Routes.experience,
-        )}`}
+        className={dynamicClass(path, Routes.experience)}
       >
         Experiences
       </Button>
 
       <Button
-        onClick={() => navigate(`/${Routes.project}`)}
+        onClick={() => animatedNav(Routes.project)}
         variant={"ghost"}
         size="sm"
-        className={`hidden lg:inline text-lg ${dynamicClass(
-          path,
-          Routes.project,
-        )}`}
+        className={dynamicClass(path, Routes.project)}
       >
         Projects
       </Button>
 
       <Button
-        onClick={() => navigate(`/${Routes.education}`)}
+        onClick={() => animatedNav(Routes.education)}
         variant={"ghost"}
         size="sm"
-        className={`hidden lg:inline text-lg ${dynamicClass(
-          path,
-          Routes.education,
-        )}`}
+        className={dynamicClass(path, Routes.education)}
       >
         Education
       </Button>
 
       <Button
-        onClick={() => navigate(`/${Routes.cca}`)}
+        onClick={() => animatedNav(Routes.cca)}
         variant={"ghost"}
         size="sm"
-        className={`hidden lg:inline text-lg ${dynamicClass(path, Routes.cca)}`}
+        className={dynamicClass(path, Routes.cca)}
       >
         CCAs
       </Button>
 
       <Button
-        onClick={() => navigate(`/${Routes.blog}`)}
+        onClick={() => animatedNav(Routes.blog)}
         variant={"ghost"}
         size="sm"
-        className={`hidden lg:inline text-lg ${dynamicClass(
-          path,
-          Routes.blog,
-        )}`}
+        className={dynamicClass(path, Routes.blog)}
       >
         Blogs
       </Button>
