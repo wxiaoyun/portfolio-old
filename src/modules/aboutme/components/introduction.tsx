@@ -1,8 +1,6 @@
 import React from "react";
-import { motion } from "framer-motion";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { fadeSlideInVariants } from "@/lib/variants";
 
 export const Introduction: React.FC = () => {
 	const [src, setSrc] = React.useState("/self_portrait_low_res.jpg");
@@ -13,14 +11,7 @@ export const Introduction: React.FC = () => {
 		highResImage.onload = () => setSrc("/self_portrait_zoomed.JPEG");
 	}, []);
 	return (
-		<motion.div
-			className="w-full"
-			initial="offscreen"
-			whileInView="onscreen"
-			viewport={{ once: true, amount: 0.4 }}
-		>
-			<motion.div
-				variants={fadeSlideInVariants}
+			<div
 				className="h-[80vh] mt-[10vh] flex flex-col justify-center items-center gap-6"
 			>
 				<div className="flex w-full justify-around items-center gap-6">
@@ -51,8 +42,7 @@ export const Introduction: React.FC = () => {
 					humor and friendliness into the team dynamics, creating a positive and
 					enjoyable environment for everyone involved.
 				</p>
-			</motion.div>
-		</motion.div>
+			</div>
 	);
 };
 

@@ -25,7 +25,7 @@ export const Navbar: React.FC = () => {
   const path = window.location.pathname.split("/")[1];
   return (
     <div className="w-full flex flex-row justify-between lg:justify-center lg:gap-3 p-3">
-      <NavButton />
+      <NavButton nav={animatedNav} />
 
       <Button
         onClick={() => animatedNav(Routes.aboutme)}
