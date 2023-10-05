@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import {
   Card,
   CardContent,
@@ -10,6 +11,7 @@ import {
 import { OpenInNewWindowIcon } from "@radix-ui/react-icons";
 import TimeAgo from "javascript-time-ago";
 import en from "javascript-time-ago/locale/en";
+import { fadeInAnimation } from "@/lib/animation";
 
 TimeAgo.addDefaultLocale(en);
 
@@ -21,7 +23,11 @@ export const BlogCard: React.FC<{ item: MediumItem }> = ({ item }) => {
   const paragraphs = apiContent.getElementsByTagName("p");
   const firstParagraph = paragraphs[0].textContent;
   return (
-    <div className="w-ful">
+    <motion.div
+      className="w-full mt-12"
+      initial={{ opacity: 0, height: 0 }}
+      animate={fadeInAnimation}
+    >
       <Card>
         <CardHeader>
           <a href={item.guid} rel="noopener noreferrer" target="_blank">
@@ -54,7 +60,7 @@ export const BlogCard: React.FC<{ item: MediumItem }> = ({ item }) => {
           </a>
         </CardFooter>
       </Card>
-    </div>
+    </motion.div>
   );
 };
 
