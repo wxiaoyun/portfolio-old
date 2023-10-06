@@ -3,10 +3,9 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 import { Button } from "@/components/ui/button";
-import { ModeToggle } from "@/components/mode-toggle";
 import { Routes } from "@/router";
 import { routeSlice } from "@/store";
-import { NavTab,NavButton } from ".";
+import { NavTab, NavButton, ModeToggle } from ".";
 
 const navLinks: NavLink[] = [
   { path: Routes.aboutme, label: "About Me" },
@@ -20,6 +19,7 @@ const navLinks: NavLink[] = [
 export const Navbar: React.FC = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
   const animatedNav = (path: string) => {
     if (window.location.pathname === `/${path}`) return;
     dispatch(routeSlice.actions.changeRoute(path));
@@ -28,7 +28,7 @@ export const Navbar: React.FC = () => {
 
   const path = window.location.pathname.split("/")[1];
   return (
-    <div className="w-full flex flex-row justify-between lg:justify-center lg:gap-3 p-3">
+    <div className="w-full flex flex-row items-center justify-between lg:justify-center lg:gap-3 p-3">
       <NavButton nav={animatedNav} />
 
       {navLinks.map((link, index) => (
