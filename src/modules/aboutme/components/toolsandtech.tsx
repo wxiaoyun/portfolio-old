@@ -19,10 +19,11 @@ export const ToolsAndTech: React.FC = () => {
 
       <div className="self-center mt-6">
         <ToolMatrix />
-        <p className="text-sm text-center text-muted-foreground mt-6">
-          Try dragging the icons :P
-        </p>
       </div>
+
+      <p className="self-center text-sm text-center text-muted-foreground mt-6">
+        Try dragging the icons :P
+      </p>
     </motion.div>
   );
 };
