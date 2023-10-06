@@ -17,7 +17,7 @@ export const Introduction: React.FC = () => {
 				<div className="flex w-full justify-around items-center gap-6">
 					<Avatar className="h-52 w-52 shadow-xl">
 						<AvatarImage src={src} alt="portrait" />
-						<AvatarFallback></AvatarFallback>
+						<AvatarFallback>Xiaoyun</AvatarFallback>
 					</Avatar>
 					<div>
 						<h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
