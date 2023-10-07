@@ -105,7 +105,7 @@ export const NavButton: React.FC<{ nav: (path: string) => void }> = ({
 
               <li className="row-span-3">
                 <Button variant={"ghost"} size="sm" className="text-lg">
-                  <a href="/WU_XIAOYUN_CV_v2.5.pdf" download>
+                  <a href="/WU_XIAOYUN_CV_v2.6.pdf" download>
                     Resume
                   </a>
                 </Button>

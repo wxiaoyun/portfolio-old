@@ -2,7 +2,7 @@
   "homepage": "https://ForAeons.github.io/ForAeons",
   "name": "portfolio",
   "private": true,
-  "version": "0.2.0",
+  "version": "0.3.0",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
