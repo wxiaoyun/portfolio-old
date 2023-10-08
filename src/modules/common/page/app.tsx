@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { Outlet, useNavigate } from "react-router-dom";
-import { Routes } from "@/router";
+import { Routes } from "@/constants";
 import { routeSlice } from "@/store";
 import { Footer, Navbar } from "..";
 

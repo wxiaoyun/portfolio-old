@@ -7,6 +7,7 @@ import { BlogSkeleton, BlogCard, BlogMe } from "../components/";
 import { Centred } from "@/modules";
 import { slideVariants } from "@/lib/variants";
 import { slideTransition } from "@/lib/transition";
+import { blog } from "@/constants";
 
 export const Blog: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -39,10 +40,10 @@ export const Blog: React.FC = () => {
       transition={slideTransition}
     >
       <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl self-start">
-        Blogs
+        {blog.title}
       </h1>
 
-      <AnimatePresence>
+      <AnimatePresence initial={false}>
         {/* Loading Skeleton */}
         {blogState.fetchState === "loading" &&
           new Array(3).fill(0).map((_, index) => <BlogSkeleton key={index} />)}

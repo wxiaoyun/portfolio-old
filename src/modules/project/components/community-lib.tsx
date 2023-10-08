@@ -4,104 +4,88 @@ import { motion } from "framer-motion";
 import { fadeSlideInVariants } from "@/lib/variants";
 import { Separator } from "@/components/ui/separator";
 import {
-	Card,
-	CardContent,
-	CardDescription,
-	CardFooter,
-	CardHeader,
-	CardTitle,
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
 } from "@/components/ui/card";
 import {
-	Accordion,
-	AccordionContent,
-	AccordionItem,
-	AccordionTrigger,
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
 } from "@/components/ui/accordion";
+import { project } from "@/constants";
 
 export const CommunityLib: React.FC = () => {
-	const [value, setValue] = React.useState(["community-lib"]);
+  const [value, setValue] = React.useState(["community-lib"]);
 
-	return (
-		<motion.div
-			className="w-full"
-			initial="offscreen"
-			whileInView="onscreen"
-			viewport={{ once: true, amount: 0.4 }}
-		>
-			<motion.div
-				variants={fadeSlideInVariants}
-				className="flex flex-col gap-3 items-start"
-			>
-				<Card className="w-full">
-					<Accordion type="multiple" value={value} onValueChange={setValue}>
-						<AccordionItem value="community-lib">
-							<AccordionTrigger className="pr-3">
-								<CardHeader className="text-left">
-									<CardTitle>Cambodia Community Library</CardTitle>
+  return (
+    <motion.div
+      className="w-full"
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.4 }}
+    >
+      <motion.div
+        variants={fadeSlideInVariants}
+        className="flex flex-col gap-3 items-start"
+      >
+        <Card className="w-full bg-primary-foreground border-none shadow-lg">
+          <Accordion type="multiple" value={value} onValueChange={setValue}>
+            <AccordionItem value="community-lib">
+              <AccordionTrigger className="pr-3">
+                <CardHeader className="text-left">
+                  <CardTitle>{project.communitylib.title}</CardTitle>
 
-									<CardDescription>
-										Backend Developer, Frontend Developer
-									</CardDescription>
-								</CardHeader>
-							</AccordionTrigger>
+                  <CardDescription>
+                    {project.communitylib.description}
+                  </CardDescription>
+                </CardHeader>
+              </AccordionTrigger>
 
-							<AccordionContent>
-								<CardContent>
-									<div className="flex flex-col gap-6">
-										<p className="text-sm text-muted-foreground">
-											A two year school project aimed to improve literacy level
-											in Ou Ruessei, a village located at Cambodia. My task is
-											to build a Digital Library Management System with
-											UserInterface to let the locals use ourlibrary with ease.
-										</p>
+              <AccordionContent>
+                <CardContent>
+                  <div className="flex flex-col gap-6">
+                    <Separator orientation="horizontal" />
 
-										<Separator orientation="horizontal"/>
+                    <p className="text-sm text-muted-foreground">
+                      {project.communitylib.details}
+                    </p>
 
-										<h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
-											Backend Developer:
-										</h4>
+                    {project.communitylib.items.map((item, index) => (
+                      <div key={index}>
+                        <h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
+                          {item.title}
+                        </h4>
 
-										<ul>
-											<li className="list-disc list-inside">
-												<p className="inline">
-													Building a Library Management System Golang backend
-													server on my own. Users can borrow, return renew and
-													reserve books while staff can carry out administrative
-													actions. Allresources are managed with Role Based
-													Access Control.
-												</p>
-											</li>
-										</ul>
+                        <ul className="ml-4">
+                          {item.paragraphs.map((item, index) => (
+                            <li key={index} className="list-disc">
+                              <p className="inline">{item}</p>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
 
-										<Separator orientation="horizontal"/>
-
-										<h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
-											Frontend Developer:
-										</h4>
-
-										<ul>
-											<li className="list-disc list-inside">
-												<p className="inline">
-													A React Typescript web application that allows
-													librarians to manage books, loans and fines, and let
-													visitors view and loan books.
-												</p>
-											</li>
-										</ul>
-									</div>
-								</CardContent>
-								<CardFooter>
-									<h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
-										Aug 2023 - Ongoing | Singapore & Cambodia
-									</h4>
-								</CardFooter>
-							</AccordionContent>
-						</AccordionItem>
-					</Accordion>
-				</Card>
-			</motion.div>
-		</motion.div>
-	);
+                    <Separator orientation="horizontal" />
+                  </div>
+                </CardContent>
+                <CardFooter>
+                  <h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
+                    {project.communitylib.time}
+                  </h4>
+                </CardFooter>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </Card>
+      </motion.div>
+    </motion.div>
+  );
 };
 
 export default CommunityLib;

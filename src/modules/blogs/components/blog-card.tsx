@@ -28,7 +28,7 @@ export const BlogCard: React.FC<{ item: MediumItem }> = ({ item }) => {
       initial={{ opacity: 0, height: 0 }}
       animate={fadeInAnimation}
     >
-      <Card>
+      <Card className="bg-primary-foreground border-none shadow-lg">
         <CardHeader>
           <a href={item.guid} rel="noopener noreferrer" target="_blank">
             <CardTitle className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0 hover:underline">
@@ -42,7 +42,11 @@ export const BlogCard: React.FC<{ item: MediumItem }> = ({ item }) => {
         </CardHeader>
 
         <CardContent className="flex flex-col gap-3">
-          <img src={item.thumbnail} alt={item.title} className="w-full" />
+          <img
+            src={item.thumbnail}
+            alt={item.title}
+            className="w-full rounded-sm"
+          />
 
           <p className="leading-7 [&:not(:first-child)]:mt-6">
             {firstParagraph}...

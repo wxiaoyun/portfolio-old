@@ -14,66 +14,57 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { education, NUSLogo } from "@/constants";
 
 export const Bachelor: React.FC = () => {
   const [value, setValue] = React.useState(["nus"]);
 
   return (
     <div className="w-full flex flex-col gap-3 items-start">
-      <Card className="w-full">
+      <Card className="w-full bg-primary-foreground border-none shadow-lg">
         <Accordion type="multiple" value={value} onValueChange={setValue}>
           <AccordionItem value="nus">
             <AccordionTrigger className="pr-3">
               <CardHeader className="text-left">
                 <img
-                  src="National_University_of_Singapore_Logo.png"
-                  alt="National University of Singapore Logo"
+                  src={NUSLogo.src}
+                  alt={NUSLogo.alt}
                   className="w-full px-6 mb-6"
                 />
 
-                <CardTitle>Bachelor of Computing in Computer Science</CardTitle>
+                <CardTitle>{education.nus.title}</CardTitle>
 
-                <CardDescription>
-                  National University of Singapore
-                </CardDescription>
+                <CardDescription>{education.nus.subtitle}</CardDescription>
               </CardHeader>
             </AccordionTrigger>
 
             <AccordionContent>
               <CardContent>
                 <div className="flex flex-col gap-6">
-                  <p className="text-sm text-muted-foreground">GPA: 4.68/5.0</p>
-
                   <Separator orientation="horizontal" />
 
                   <h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
-                    Relevant Coursework:
+                    {education.nus.coursework.title}
                   </h4>
 
-                  <ul>
-                    <li className="list-disc list-inside">
-                      <p className="inline">
-                        CS1101S Programming Methodology: A
-                      </p>
-                    </li>
-
-                    <li className="list-disc list-inside">
-                      <p className="inline">
-                        CS2030S Programming Methodology II: A
-                      </p>
-                    </li>
-
-                    <li className="list-disc list-inside">
-                      <p className="inline">
-                        CS2040S Data Structures and Algorithms: A
-                      </p>
-                    </li>
+                  <ul className="ml-4">
+                    {education.nus.coursework.courselist.map((item, index) => (
+                      <li key={index} className="list-disc">
+                        <p className="inline">{item}</p>
+                      </li>
+                    ))}
                   </ul>
+
+                  <p className="text-sm text-muted-foreground">
+                    {education.nus.gpa}
+                  </p>
+
+                  <Separator orientation="horizontal" />
                 </div>
               </CardContent>
               <CardFooter>
                 <h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
-                  Aug 2022 - May 2026 | Singapore
+                  {education.nusc.time}
                 </h4>
               </CardFooter>
             </AccordionContent>

@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-
 import { Separator } from "@/components/ui/separator";
 import { Introduction, ToolsAndTech, Hobbies } from "../components/";
 import { slideVariants } from "@/lib/variants";

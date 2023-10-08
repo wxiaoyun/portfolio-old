@@ -1,7 +1,7 @@
 import React from "react";
-
 import { motion } from "framer-motion";
 import { fadeSlideInVariants } from "@/lib/variants";
+import { aboutme } from "@/constants";
 
 export const Hobbies: React.FC = () => {
   return (
@@ -13,8 +13,7 @@ export const Hobbies: React.FC = () => {
       variants={fadeSlideInVariants}
     >
       <p className="leading-7 [&:not(:first-child)]:mt-6">
-        I enjoy playing drums and I am currently learning how to play golf. I am
-        passionate about working out and I absolutely love watching movies.
+        {aboutme.hobbies.p1}
       </p>
     </motion.div>
   );

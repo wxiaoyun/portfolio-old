@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "@/store";
 import { CommunityLib, PortfolioPage } from "..";
 import { slideFadeTransition } from "@/lib/transition";
+import { project } from "@/constants";
 
 export const Project: React.FC = () => {
   const routeState = useSelector((state: RootState) => state.route);
@@ -20,7 +21,7 @@ export const Project: React.FC = () => {
       transition={slideFadeTransition}
     >
       <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl self-start">
-        Projects
+        {project.title}
       </h1>
 
       <PortfolioPage />

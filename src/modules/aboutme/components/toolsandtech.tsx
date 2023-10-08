@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-
 import { fadeSlideInVariants } from "@/lib/variants";
 import { ToolMatrix } from "..";
+import { aboutme } from "@/constants";
 
 export const ToolsAndTech: React.FC = () => {
   return (
@@ -14,7 +14,7 @@ export const ToolsAndTech: React.FC = () => {
       variants={fadeSlideInVariants}
     >
       <div className="text-lg font-semibold w-full">
-        Tools and Technologies that I use
+        {aboutme.toolsandtech.title}
       </div>
 
       <div className="self-center mt-6">
@@ -22,7 +22,7 @@ export const ToolsAndTech: React.FC = () => {
       </div>
 
       <p className="self-center text-sm text-center text-muted-foreground mt-6">
-        Try dragging the icons :P
+        {aboutme.toolsandtech.caption}
       </p>
     </motion.div>
   );
