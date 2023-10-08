@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "@/store";
 import { Bachelor, NUSCollege } from "..";
 import { slideFadeTransition } from "@/lib/transition";
+import { education } from "@/constants";
 
 export const Education: React.FC = () => {
   const routeState = useSelector((state: RootState) => state.route);
@@ -20,7 +21,7 @@ export const Education: React.FC = () => {
       transition={slideFadeTransition}
     >
       <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl self-start">
-        Education
+        {education.title}
       </h1>
 
       <Bachelor />

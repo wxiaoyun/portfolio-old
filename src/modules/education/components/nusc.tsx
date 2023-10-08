@@ -1,5 +1,4 @@
 import React from "react";
-
 import { motion } from "framer-motion";
 import { fadeSlideInVariants } from "@/lib/variants";
 import {
@@ -15,6 +14,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { education } from "@/constants";
 
 export const NUSCollege: React.FC = () => {
   return (
@@ -28,7 +28,7 @@ export const NUSCollege: React.FC = () => {
         variants={fadeSlideInVariants}
         className="flex flex-col gap-3 items-start"
       >
-        <Card className="w-full">
+        <Card className="w-full bg-primary-foreground border-none shadow-lg">
           <Accordion type="multiple">
             <AccordionItem value="nusc">
               <AccordionTrigger className="pr-3">
@@ -39,16 +39,16 @@ export const NUSCollege: React.FC = () => {
                     className="w-full px-6 mb-6"
                   />
 
-                  <CardTitle>NUS Undergraduate Honours College</CardTitle>
+                  <CardTitle>{education.nusc.title}</CardTitle>
 
-                  <CardDescription>NUS College</CardDescription>
+                  <CardDescription>{education.nusc.subtitle}</CardDescription>
                 </CardHeader>
               </AccordionTrigger>
 
               <AccordionContent>
                 <CardFooter>
                   <h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
-                    Aug 2022 - May 2026 | Singapore
+                    {education.nusc.time}
                   </h4>
                 </CardFooter>
               </AccordionContent>

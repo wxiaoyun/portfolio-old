@@ -12,8 +12,8 @@ import {
   Education,
   CCA,
   Blog,
-} from "../modules";
-import { Routes } from "./routes";
+} from "@/modules";
+import { Routes } from "@/constants";
 
 export const Router = createBrowserRouter(
   createRoutesFromElements(

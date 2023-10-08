@@ -28,11 +28,11 @@ export const BlogSkeleton: React.FC = () => {
       }}
       className="w-full"
     >
-      <Card className="w-full mt-12">
+      <Card className="w-full mt-12 bg-primary-foreground border-none shadow-lg">
         <CardHeader className="flex flex-col gap-3">
           <div className="flex flex-col gap-3">
-            <Skeleton className="h-12 w-full rounded-md" />
-            <Skeleton className="h-12 w-[40%] rounded-md" />
+            <Skeleton className="bg-muted-foreground h-12 w-full rounded-md" />
+            <Skeleton className="bg-muted-foreground h-12 w-[40%] rounded-md" />
           </div>
 
           <div>
@@ -41,13 +41,13 @@ export const BlogSkeleton: React.FC = () => {
         </CardHeader>
 
         <CardContent className="flex flex-col gap-3">
-          <Skeleton className="h-48 w-full rounded-md" />
+          <Skeleton className="bg-muted-foreground h-48 w-full rounded-md" />
 
-          <Skeleton className="h-6 w-full rounded-md" />
-          <Skeleton className="h-6 w-full rounded-md" />
-          <Skeleton className="h-6 w-full rounded-md" />
-          <Skeleton className="h-6 w-full rounded-md" />
-          <Skeleton className="h-6 w-[30%] rounded-md" />
+          <Skeleton className="bg-muted-foreground h-6 w-full rounded-md" />
+          <Skeleton className="bg-muted-foreground h-6 w-full rounded-md" />
+          <Skeleton className="bg-muted-foreground h-6 w-full rounded-md" />
+          <Skeleton className="bg-muted-foreground h-6 w-full rounded-md" />
+          <Skeleton className="bg-muted-foreground h-6 w-[30%] rounded-md" />
         </CardContent>
 
         <CardFooter className="flex flex-row flex-wrap gap-3">
