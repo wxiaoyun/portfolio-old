@@ -1,4 +1,4 @@
-import { RouteArray } from "@/router/routes";
+import { RouteArray } from "@/constants";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 const initialState: AppRouteState = {
