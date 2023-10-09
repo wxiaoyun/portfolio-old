@@ -52,8 +52,8 @@ export const BlogSkeleton: React.FC = () => {
 
         <CardFooter className="flex flex-row flex-wrap gap-3">
           <Skeleton className="bg-muted-foreground opacity-5 h-6 w-[20%] rounded-md delay-900" />
-          <Skeleton className="bg-muted-foreground opacity-5 h-6 w-[20%] rounded-md" />
-          <Skeleton className="bg-muted-foreground opacity-5 h-6 w-6 rounded-full ml-auto delay-100" />
+          <Skeleton className="bg-muted-foreground opacity-5 h-6 w-[20%] rounded-md delay-900" />
+          <Skeleton className="bg-muted-foreground opacity-5 h-6 w-6 rounded-full ml-auto delay-900" />
         </CardFooter>
       </Card>
     </motion.div>
