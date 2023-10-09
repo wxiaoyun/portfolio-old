@@ -36,7 +36,7 @@ export const NUSCollege: React.FC = () => {
                   <img
                     src="NUS_College_Logo.png"
                     alt="NUS College Logo"
-                    className="w-full px-6 mb-6 min-h-[200px] object-cover"
+                    className="w-full px-6 mb-6 min-h-[200px] object-contain"
                   />
 
                   <CardTitle>{education.nusc.title}</CardTitle>

@@ -45,7 +45,7 @@ export const BlogCard: React.FC<{ item: MediumItem }> = ({ item }) => {
           <img
             src={item.thumbnail}
             alt={item.title}
-            className="w-full rounded-sm min-h-[200px] object-cover"
+            className="w-full rounded-sm min-h-[200px] object-contain"
           />
 
           <p className="leading-7 [&:not(:first-child)]:mt-6">
