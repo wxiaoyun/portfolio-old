@@ -2,7 +2,8 @@
 
 ## Overview
 
-This is a personal portfolio page built with React and TypeScript. It utilizes a variety of modern web technologies including Tailwind, Vite, Redux, Radix UI, Shadcn UI and Framer Motion.
+This is a personal portfolio page built with React and TypeScript.
+It utilizes a variety of modern web technologies including Tailwind, Vite, Redux, Radix UI, Shadcn UI and Framer Motion.
 
 ## Prerequisites
 
@@ -41,11 +42,13 @@ To start the development server, run:
 bun dev
 ```
 
-This will start the development server, and you can access the application at `http://localhost:3000`.
+This will start the development server, and you can access the application at `http://localhost:5173`.
 
 ## Deploying to Github Pages
 
-To deploy the application to Github Pages, run:
+- Edit `packages.json`: Change `"homepage": "<url_of_your_github_page>"`
+- Example: `"homepage": "https://ForAeons.github.io/ForAeons"`
+- Lastly, run the following command:
 
 ```bash
 bun run deploy
@@ -61,3 +64,5 @@ bun run deploy
 - [Radix UI](https://radix-ui.com/) - Low-level UI primitives
 - [Shadcn UI](https://ui.shadcn.com/) - A collection of UI components
 - [Framer Motion](https://www.framer.com/motion/) - For animations
+- [Devicon](https://devicon.dev/) - Icons for developer tools
+- [Flaticon](https://www.flaticon.com/free-icons/software-development) - Icon for web page

@@ -29,7 +29,7 @@ export const Bachelor: React.FC = () => {
                 <img
                   src={NUSLogo.src}
                   alt={NUSLogo.alt}
-                  className="w-full px-6 mb-6"
+                  className="w-full px-6 mb-6 min-h-[230px] object-cover"
                 />
 
                 <CardTitle>{education.nus.title}</CardTitle>
