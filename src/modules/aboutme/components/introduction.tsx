@@ -25,7 +25,7 @@ export const Introduction: React.FC = () => {
       <div className="flex w-full justify-around items-center gap-6">
         <AnimatePresence mode="wait">
           <motion.img
-            className="h-52 w-52 aspect-square transition-shadow duration-500 shadow-xl hover:shadow-2xl rounded-full overflow-hidden"
+            className="max-h-52 max-w-52 aspect-square transition-shadow duration-500 shadow-xl hover:shadow-2xl rounded-full overflow-hidden"
             key={portrait.src}
             src={portrait.src}
             alt={portrait.alt}
