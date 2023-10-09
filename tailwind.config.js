@@ -70,6 +70,12 @@ module.exports = {
 				"accordion-down": "accordion-down 500ms cubic-bezier(0.87, 0, 0.13, 1)",
 				"accordion-up": "accordion-up 500ms cubic-bezier(0.87, 0, 0.13, 1)",
 			},
+			transitionDelay: {
+        '400': '400ms',
+        '600': '600ms',
+        '800': '800ms',
+        '900': '900ms',
+      }
 		},
 	},
 	plugins: [require("tailwindcss-animate")],
