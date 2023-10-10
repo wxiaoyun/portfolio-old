@@ -17,19 +17,21 @@ import {
 import { education } from "@/constants";
 
 export const NUSCollege: React.FC = () => {
+  const [value, setValue] = React.useState(["nusc"]);
+
   return (
     <motion.div
       className="w-full"
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: true, amount: 0.4 }}
+      viewport={{ once: true, amount: 0.2 }}
     >
       <motion.div
         variants={fadeSlideInVariants}
         className="flex flex-col gap-3 items-start"
       >
         <Card className="w-full bg-primary-foreground border-none shadow-lg">
-          <Accordion type="multiple">
+          <Accordion type="multiple" value={value} onValueChange={setValue}>
             <AccordionItem value="nusc">
               <AccordionTrigger className="pr-3">
                 <CardHeader className="text-left">
