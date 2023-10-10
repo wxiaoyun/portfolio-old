@@ -21,7 +21,7 @@ export const Introduction: React.FC = () => {
 
     const intervalKey = setInterval(() => {
       if (iterations < Math.max(helloString.length, iamString.length))
-        iterations += 1 / 3;
+        iterations += 1 / 6;
       else {
         clearInterval(intervalKey);
       }
@@ -41,7 +41,7 @@ export const Introduction: React.FC = () => {
           )
           .join(""),
       );
-    }, 50);
+    }, 30);
 
     return () => clearInterval(intervalKey);
   }, []);
