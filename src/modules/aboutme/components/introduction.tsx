@@ -6,7 +6,7 @@ import {
   VectorPortraitDarkMode,
   VectorPortraitLightMode,
 } from "@/constants";
-import { randomAlphabets as randomAlphabet, randString } from "@/util/string";
+import { randomAlphabet, randString } from "@/util/string";
 
 const helloString = "Hello.";
 const iamString = "I am Xiaoyun";
@@ -73,12 +73,12 @@ export const Introduction: React.FC = () => {
             transition={{ duration: 0.4, ease: "easeIn" }}
           />
         </AnimatePresence>
-        
+
         <div className="">
           <h1 className="scroll-m-20 text-4xl font-mono font-extrabold tracking-tight lg:text-5xl">
             {hello}
           </h1>
-          
+
           <h1 className="scroll-m-20 text-4xl font-mono font-extrabold tracking-tight lg:text-5xl">
             {iam}
           </h1>
