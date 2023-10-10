@@ -10,7 +10,7 @@ export const ToolsAndTech: React.FC = () => {
       className="w-full flex flex-col gap-3"
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: true, amount: 0.4 }}
+      viewport={{ once: true, amount: 0.2 }}
       variants={fadeSlideInVariants}
     >
       <div className="text-lg font-semibold w-full">

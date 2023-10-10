@@ -9,7 +9,7 @@ export const Hobbies: React.FC = () => {
       className="w-full flex flex-col gap-3 items-start"
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: true, amount: 0.4 }}
+      viewport={{ once: true, amount: 0.2 }}
       variants={fadeSlideInVariants}
     >
       <p className="leading-7 [&:not(:first-child)]:mt-6">
