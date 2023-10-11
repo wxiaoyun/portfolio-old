@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { fadeSlideInVariants } from "@/lib/variants";
 import {
 	Card,
 	CardDescription,
@@ -15,8 +14,9 @@ import {
 	AccordionItem,
 	AccordionTrigger,
 } from "@/components/ui/accordion";
-import { education } from "@/constants";
+import { fadeSlideInVariants } from "@/lib/variants";
 import { Separator } from "@/components/ui/separator";
+import { education } from "@/constants";
 
 export const NUSCollege: React.FC = () => {
 	const [value, setValue] = React.useState(["nusc"]);
