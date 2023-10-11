@@ -5,4 +5,5 @@ export * from "./nav-button";
 export * from "./centre";
 export * from "./mode-toggle";
 export * from "./github-icon";
+export * from "./linkedin-icon";
 export * from "./cvwo-logo";

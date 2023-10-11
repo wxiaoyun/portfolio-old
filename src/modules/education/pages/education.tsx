@@ -1,34 +1,33 @@
 import React from "react";
-import { motion } from "framer-motion";
-
-import { slideVariants } from "@/lib/variants";
 import { useSelector } from "react-redux";
+import { motion } from "framer-motion";
 import { RootState } from "@/store";
-import { Bachelor, NUSCollege } from "..";
-import { slideFadeTransition } from "@/lib/transition";
 import { education } from "@/constants";
+import { slideVariants } from "@/lib/variants";
+import { slideFadeTransition } from "@/lib/transition";
+import { Bachelor, NUSCollege } from "..";
 
 export const Education: React.FC = () => {
-  const routeState = useSelector((state: RootState) => state.route);
-  return (
-    <motion.div
-      className="flex flex-col gap-y-12 items-center mx-6 w-full"
-      variants={slideVariants}
-      custom={routeState.direction}
-      initial="enter"
-      animate="center"
-      exit="exit"
-      transition={slideFadeTransition}
-    >
-      <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl self-start">
-        {education.title}
-      </h1>
+	const routeState = useSelector((state: RootState) => state.route);
+	return (
+		<motion.div
+			className="flex flex-col gap-y-12 items-center mx-6 w-full"
+			variants={slideVariants}
+			custom={routeState.direction}
+			initial="enter"
+			animate="center"
+			exit="exit"
+			transition={slideFadeTransition}
+		>
+			<h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl self-start">
+				{education.title}
+			</h1>
 
-      <Bachelor />
+			<Bachelor />
 
-      <NUSCollege />
-    </motion.div>
-  );
+			<NUSCollege />
+		</motion.div>
+	);
 };
 
 export default Education;

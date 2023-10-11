@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import TimeAgo from "javascript-time-ago";
+import en from "javascript-time-ago/locale/en";
 import {
 	Card,
 	CardContent,
@@ -9,12 +11,9 @@ import {
 	CardTitle,
 } from "@/components/ui/card";
 import { OpenInNewWindowIcon } from "@radix-ui/react-icons";
-import TimeAgo from "javascript-time-ago";
-import en from "javascript-time-ago/locale/en";
 import { fadeInAnimation } from "@/lib/animation";
 
 TimeAgo.addDefaultLocale(en);
-
 const timeAgo = new TimeAgo("en-US");
 
 export const BlogCard: React.FC<{ item: MediumItem }> = ({ item }) => {
