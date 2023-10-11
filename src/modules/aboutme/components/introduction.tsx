@@ -6,21 +6,26 @@ import {
   VectorPortraitDarkMode,
   VectorPortraitLightMode,
 } from "@/constants";
-import { randomAlphabet, randString } from "@/util/string";
-
-const helloString = "Hello.";
-const iamString = "I am Xiaoyun";
+import { randomAlphabet, randString } from "@/util";
 
 export const Introduction: React.FC = () => {
-  const [hello, setHello] = React.useState(randString(helloString));
-  const [iam, setIam] = React.useState(randString(iamString));
+  const [hello, setHello] = React.useState(
+    randString(aboutme.introduction.hello),
+  );
+  const [iam, setIam] = React.useState(randString(aboutme.introduction.iam));
 
   // text animation
   React.useEffect(() => {
     let iterations = 0;
 
     const intervalKey = setInterval(() => {
-      if (iterations < Math.max(helloString.length, iamString.length))
+      if (
+        iterations <
+        Math.max(
+          aboutme.introduction.hello.length,
+          aboutme.introduction.iam.length,
+        )
+      )
         iterations += 1 / 6;
       else {
         clearInterval(intervalKey);
@@ -29,7 +34,9 @@ export const Introduction: React.FC = () => {
         prev
           .split("")
           .map((_, index) =>
-            index < iterations ? helloString[index] : randomAlphabet(),
+            index < iterations
+              ? aboutme.introduction.hello[index]
+              : randomAlphabet(),
           )
           .join(""),
       );
@@ -37,7 +44,9 @@ export const Introduction: React.FC = () => {
         prev
           .split("")
           .map((_, index) =>
-            index < iterations ? iamString[index] : randomAlphabet(),
+            index < iterations
+              ? aboutme.introduction.iam[index]
+              : randomAlphabet(),
           )
           .join(""),
       );
