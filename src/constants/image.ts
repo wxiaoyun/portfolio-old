@@ -37,3 +37,8 @@ export const DigitalLib: Img = {
   src: "/digital_library.png",
   alt: "Digital Library",
 };
+
+export const PortfolioBg: Img = {
+  src: "/portfolio_bg.png",
+  alt: "Portfolio Background",
+};

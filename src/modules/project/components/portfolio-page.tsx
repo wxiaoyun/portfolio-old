@@ -17,6 +17,7 @@ import {
 import {
   project,
   GITHUB_FORAEONS_PORTFOLIO_REPO,
+  PortfolioBg,
 } from "@/constants";
 import { GithubIcon } from "@/modules";
 
@@ -32,6 +33,12 @@ export const PortfolioPage: React.FC = () => {
           <AccordionItem value="portfolio-page">
             <AccordionTrigger className="pr-3">
               <CardHeader className="text-left w-full">
+                <img
+                  src={PortfolioBg.src}
+                  alt={PortfolioBg.alt}
+                  className="w-full"
+                />
+
                 <CardTitle>{project.portfolio.title}</CardTitle>
 
                 <CardDescription>
