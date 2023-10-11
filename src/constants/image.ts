@@ -32,3 +32,8 @@ export const TailwindCSSLogo: Img = {
   src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
   alt: "tailwindcss",
 };
+
+export const DigitalLib: Img = {
+  src: "/digital_library.png",
+  alt: "Digital Library",
+};
