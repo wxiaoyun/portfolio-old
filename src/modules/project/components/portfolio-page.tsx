@@ -14,12 +14,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import {
-  project,
-  GITHUB_FORAEONS_PORTFOLIO_REPO,
-  PortfolioBg,
-} from "@/constants";
-import { GithubIcon } from "@/modules";
+import { project, GITHUB_FORAEONS_PORTFOLIO_REPO } from "@/constants";
+import { GithubIcon, PortfolioLogo } from "@/modules";
 
 const iconSize = 20;
 
@@ -33,11 +29,7 @@ export const PortfolioPage: React.FC = () => {
           <AccordionItem value="portfolio-page">
             <AccordionTrigger className="pr-3">
               <CardHeader className="text-left w-full">
-                <img
-                  src={PortfolioBg.src}
-                  alt={PortfolioBg.alt}
-                  className="w-full"
-                />
+                <PortfolioLogo />
 
                 <CardTitle>{project.portfolio.title}</CardTitle>
 

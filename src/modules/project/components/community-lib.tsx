@@ -1,5 +1,4 @@
 import React from "react";
-
 import { motion } from "framer-motion";
 import { fadeSlideInVariants } from "@/lib/variants";
 import { Separator } from "@/components/ui/separator";
@@ -41,7 +40,7 @@ export const CommunityLib: React.FC = () => {
                   <img
                     src={DigitalLib.src}
                     alt={DigitalLib.alt}
-                    className="h-72 w-fit rounded-md mx-auto mb-6 shadow-lg"
+                    className="max-h-72 w-full rounded-md mx-auto mb-6 shadow-lg"
                   />
                   <CardTitle>{project.communitylib.title}</CardTitle>
 
