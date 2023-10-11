@@ -1,6 +1,5 @@
 import React from "react";
 import { Separator } from "@/components/ui/separator";
-import { useTheme } from "@/components/theme-provider";
 import { GithubIcon } from ".";
 import {
   BunPNG,
@@ -14,11 +13,9 @@ import {
   TailwindCSSLogo,
 } from "@/constants";
 
+const iconSize = 25;
+
 export const Footer: React.FC = () => {
-  const theme = useTheme();
-
-  const iconSize = 25;
-
   return (
     <div className="absolute bottom-0 w-full flex flex-row justify-between p-4 bg-background text-primary">
       <p className="text-sm text-muted-foreground break-words w-1/3 self-center">
@@ -52,7 +49,7 @@ export const Footer: React.FC = () => {
 
           <div className="flex gap-2">
             <a href={GITHUB_FORAEONS} rel="noopener noreferrer" target="_blank">
-              <GithubIcon theme={theme.theme} size={iconSize} />
+              <GithubIcon size={iconSize} />
             </a>
 
             <a
@@ -71,7 +68,6 @@ export const Footer: React.FC = () => {
                 ></path>
               </svg>
             </a>
-
             <a href={MAIL_ME} rel="noopener noreferrer" target="_blank">
               <img
                 src={EmailPNG.src}
