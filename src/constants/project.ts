@@ -27,5 +27,6 @@ export const project = {
     p1: "A personal web-based responsive portfolio project developed using modern web technologies. Built largely with React and TypeScript, this portfolio aims to serve as a comprehensive showcase of my work and expertise in front-end development.",
     p2: " This project effectively employs a variety of cutting-edge tools in its build process, including Tailwind for utility-first CSS, Vite as the build tool and development server, Redux for handling state management, Radix UI providing low-level UI primitives for more comprehensive user interface control, Shadcn UI, a field-tested library of UI components, and Bun as package manager. Animation within the project is gracefully performed by Framer Motion, demonstrating an elegant user interface experience. Finally, it uses Google Analytics to track user interactions and behaviour.",
     time: "Aug 2023 - Present",
+    github: "https://github.com/ForAeons/ForAeons.github.io",
   },
 };

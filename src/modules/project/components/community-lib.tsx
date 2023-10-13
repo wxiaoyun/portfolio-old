@@ -57,6 +57,8 @@ export const CommunityLib: React.FC = () => {
                   <p className="text-sm text-muted-foreground">
                     {project.communitylib.details}
                   </p>
+                  
+                  <Separator orientation="horizontal" />
 
                   {project.communitylib.items.map((item, index) => (
                     <div key={index}>

@@ -11,7 +11,7 @@ export const fetchMediumData = createAsyncThunk(
 	async () => {
 		const [response] = await Promise.all([
 			fetch(FETCH_MEDIUM_FEED_URL),
-			new Promise((resolve) => setTimeout(resolve, 2500)),
+			new Promise((resolve) => setTimeout(resolve, 2000)),
 		]); // Simulate loading
 		const data = await response.json();
 		return data;
