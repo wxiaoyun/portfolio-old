@@ -14,10 +14,10 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { project, GITHUB_FORAEONS_PORTFOLIO_REPO } from "@/constants";
+import { project  } from "@/constants";
 import { GithubIcon, PortfolioLogo } from "@/modules";
 
-const iconSize = 20;
+const iconSize = 15;
 
 export const PortfolioPage: React.FC = () => {
   const [value, setValue] = React.useState(["portfolio-page"]);
@@ -42,7 +42,19 @@ export const PortfolioPage: React.FC = () => {
             <AccordionContent>
               <CardContent className="flex flex-col gap-6">
                 <Separator orientation="horizontal" />
-                <p className="leading-7">{project.portfolio.p1}</p>
+                <p className="text-sm text-muted-foreground">
+                  {project.portfolio.p1}
+                </p>
+                <a
+                  href={project.portfolio.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mx-auto flex items-center gap-2 hover:opacity-70 transition"
+                >
+                  <p className="text-sm text-muted-foreground">Source code</p>
+                  <GithubIcon size={iconSize} />
+                </a>
+                <Separator orientation="horizontal" />
                 <p className="leading-7">{project.portfolio.p2}</p>
                 <Separator orientation="horizontal" />{" "}
               </CardContent>
@@ -50,16 +62,6 @@ export const PortfolioPage: React.FC = () => {
                 <h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
                   {project.portfolio.time}
                 </h4>
-
-                <a
-                  href={GITHUB_FORAEONS_PORTFOLIO_REPO}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3"
-                >
-                  <p className="text-sm text-muted-foreground">Source code</p>
-                  <GithubIcon size={iconSize} />
-                </a>
               </CardFooter>
             </AccordionContent>
           </AccordionItem>

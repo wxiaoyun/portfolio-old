@@ -16,6 +16,7 @@ import {
 import { cca } from "@/constants";
 import { CvwoLogo } from "@/modules";
 import { Separator } from "@/components/ui/separator";
+import { OpenInNewWindowIcon } from "@radix-ui/react-icons";
 
 export const CvwoExco: React.FC = () => {
   const [value, setValue] = React.useState(["cvwoexco"]);
@@ -38,8 +39,37 @@ export const CvwoExco: React.FC = () => {
                 <div className="flex flex-col gap-6">
                   <Separator />
                   <p className="text-sm text-muted-foreground">
-                    {cca.cvwoexco.p1}
+                    {cca.cvwoexco.description}
                   </p>
+
+                  <a
+                    href={cca.cvwoexco.CVWO_PAGE_URL}
+                    className="flex items-center gap-2 hover:opacity-70 transition text-muted-foreground mx-auto"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    {cca.cvwoexco.officialpage}
+                    <OpenInNewWindowIcon className="w-4 h-4" />
+                  </a>
+
+                  <Separator />
+                  
+                  {cca.cvwoexco.items.map((item, index) => (
+                    <div key={index}>
+                      <h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
+                        {item.title}
+                      </h4>
+
+                      <ul className="ml-4">
+                        {item.paragraphs.map((item, index) => (
+                          <li key={index} className="list-disc">
+                            <p className="inline">{item}</p>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                  
                   <Separator />
                 </div>
               </CardContent>

@@ -57,6 +57,8 @@ export const CommunityLib: React.FC = () => {
                   <p className="text-sm text-muted-foreground">
                     {project.communitylib.details}
                   </p>
+                  
+                  <Separator orientation="horizontal" />
 
                   {project.communitylib.items.map((item, index) => (
                     <div key={index}>
@@ -74,7 +76,7 @@ export const CommunityLib: React.FC = () => {
                     </div>
                   ))}
 
-                  <Separator orientation="horizontal" />
+                  <Separator />
                 </CardContent>
                 <CardFooter>
                   <h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
