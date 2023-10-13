@@ -76,7 +76,7 @@ export const CommunityLib: React.FC = () => {
                     </div>
                   ))}
 
-                  <Separator orientation="horizontal" />
+                  <Separator />
                 </CardContent>
                 <CardFooter>
                   <h4 className="scroll-m-20 text-lg font-semibold tracking-tight">

@@ -4,7 +4,8 @@ export const experience = {
     title: "Computing For Voluntary Welfare Organisations",
     description:
       "Computing for Voluntary Welfare Organisations (CVWO) is an initiative founded by Dr Ben Leong and spearheaded by undergraduates from the National University of Singapore School of Computing. Our mission is to build IT systems that help our partner VWOs serve the community more effectively.",
-    roles: "Backend Developer, Frontend Developer, Secretary, Deputy Team Lead",
+    position:
+      "Backend Developer, Frontend Developer, Secretary, Deputy Team Lead",
     items: [
       {
         title: "Backend Developer",

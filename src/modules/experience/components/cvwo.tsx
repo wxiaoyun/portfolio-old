@@ -30,7 +30,7 @@ export const Cvwo: React.FC = () => {
               <CardHeader className="text-left w-full">
                 <CvwoLogo />
                 <CardTitle>{experience.cvwo.title}</CardTitle>
-                <CardDescription>{experience.cvwo.roles}</CardDescription>
+                <CardDescription>{experience.cvwo.position}</CardDescription>
               </CardHeader>
             </AccordionTrigger>
 
@@ -82,7 +82,7 @@ export const Cvwo: React.FC = () => {
 
                 <Separator orientation="horizontal" />
               </CardContent>
-              <CardFooter className="w-full flex flex-col items-start">
+              <CardFooter>
                 <h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
                   {experience.cvwo.time}
                 </h4>
