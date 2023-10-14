@@ -54,11 +54,11 @@ export const NUSCollege: React.FC = () => {
 									<Separator />
 
 									<h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
-										{education.nus.coursework.title}
+										{education.nusc.coursework.title}
 									</h4>
 
 									<ul className="ml-4">
-										{education.nus.coursework.courselist.map((item, index) => (
+										{education.nusc.coursework.courselist.map((item, index) => (
 											<li key={index} className="list-disc">
 												<p className="inline">{item}</p>
 											</li>
