@@ -52,6 +52,20 @@ export const NUSCollege: React.FC = () => {
 							<AccordionContent>
 								<CardContent className="flex flex-col gap-6">
 									<Separator />
+
+									<h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
+										{education.nus.coursework.title}
+									</h4>
+
+									<ul className="ml-4">
+										{education.nus.coursework.courselist.map((item, index) => (
+											<li key={index} className="list-disc">
+												<p className="inline">{item}</p>
+											</li>
+										))}
+									</ul>
+
+									<Separator />
 								</CardContent>
 								<CardFooter>
 									<h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
