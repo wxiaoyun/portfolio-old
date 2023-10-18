@@ -2,6 +2,7 @@ import React from "react";
 import { Separator } from "@/components/ui/separator";
 import { GithubIcon, LinkedInIcon } from ".";
 import {
+	BUN_URL,
 	BunPNG,
 	DEVICON_URL,
 	EmailPNG,
@@ -9,7 +10,9 @@ import {
 	GITHUB_FORAEONS,
 	LINKEDIN_WU_XIAOYUN,
 	MAIL_ME,
+	REACT_URL,
 	ReactLogo,
+	TAILWIND_URL,
 	TailwindCSSLogo,
 } from "@/constants";
 
@@ -78,19 +81,25 @@ export const Footer: React.FC = () => {
 					</small>
 
 					<div className="flex gap-2">
-						<img
-							src={ReactLogo.src}
-							height={iconSize}
-							width={iconSize}
-							alt={ReactLogo.alt}
-						/>
-						<img
-							src={TailwindCSSLogo.src}
-							height={iconSize}
-							width={iconSize}
-							alt={TailwindCSSLogo.alt}
-						/>
-						<img src={BunPNG.src} width="25" height="25" alt={BunPNG.alt} />
+						<a href={REACT_URL} rel="noopener noreferrer" target="_blank">
+							<img
+								src={ReactLogo.src}
+								height={iconSize}
+								width={iconSize}
+								alt={ReactLogo.alt}
+							/>
+						</a>
+						<a href={TAILWIND_URL} rel="noopener noreferrer" target="_blank">
+							<img
+								src={TailwindCSSLogo.src}
+								height={iconSize}
+								width={iconSize}
+								alt={TailwindCSSLogo.alt}
+							/>
+						</a>
+						<a href={BUN_URL} rel="noopener noreferrer" target="_blank">
+							<img src={BunPNG.src} width="25" height="25" alt={BunPNG.alt} />
+						</a>
 					</div>
 				</div>
 			</div>
