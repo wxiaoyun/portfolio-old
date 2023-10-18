@@ -8,3 +8,7 @@ export const DEVICON_URL: Url = "https://devicon.dev/";
 export const MAIL_ME: Url = "mailto:e0702008@u.nus.edu";
 export const SCHOOL_EMAIL: Url = "e0702008@u.nus.edu";
 export const RESUME_URL: Url = "/WU_XIAOYUN_CV_v2.6.pdf";
+
+export const REACT_URL: Url = "https://reactjs.org/";
+export const TAILWIND_URL: Url = "https://tailwindcss.com/";
+export const BUN_URL: Url = "https://bun.sh/";
