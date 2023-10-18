@@ -1,6 +1,5 @@
-
 export const Routes = {
-    aboutme: "aboutme",
+    aboutme: "about",
     experience: "experience",
     project: "project",
     education: "education",
@@ -18,10 +17,10 @@ export const RouteArray = [
 ];
 
 export const NavLinks: NavLink[] = [
-  { path: Routes.aboutme, label: "About Me" },
-  { path: Routes.experience, label: "Experiences" },
-  { path: Routes.project, label: "Projects" },
-  { path: Routes.education, label: "Education" },
-  { path: Routes.cca, label: "CCAs" },
-  { path: Routes.blog, label: "Blogs" },
+    { path: Routes.aboutme, label: "About Me" },
+    { path: Routes.experience, label: "Experiences" },
+    { path: Routes.project, label: "Projects" },
+    { path: Routes.education, label: "Education" },
+    { path: Routes.cca, label: "CCAs" },
+    { path: Routes.blog, label: "Blogs" },
 ];

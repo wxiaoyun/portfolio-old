@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { routeSlice } from "@/store";
-import { NavTab, NavButton, ModeToggle, ContactMeBtn } from ".";
+import { NavTab, NavButton, ModeToggle, ContactBtn } from ".";
 import { RESUME_URL, NavLinks } from "@/constants";
 
 export const Navbar: React.FC = () => {
@@ -31,9 +31,8 @@ export const Navbar: React.FC = () => {
 				</a>
 			</Button>
 
+			<ContactBtn />
 			<ModeToggle />
-
-			<ContactMeBtn />
 		</div>
 	);
 };
