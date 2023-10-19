@@ -29,7 +29,7 @@ export const ContactBtn: React.FC = () => {
       <DialogTrigger className="ml-auto lg:ml-0">
         <Button variant="ghost" size="icon">
           <Phone className="h-[1.2rem] w-[1.2rem]" />
-          <span className="sr-only">Contact Me</span>
+          <span className="sr-only">Toggle contact-me modal window</span>
         </Button>
       </DialogTrigger>
       <DialogContent>
@@ -39,7 +39,7 @@ export const ContactBtn: React.FC = () => {
           <Separator />
 
           <DialogDescription>
-            You can reach me at any of the following:
+            You can reach me at any of the following links:
           </DialogDescription>
 
           <a
