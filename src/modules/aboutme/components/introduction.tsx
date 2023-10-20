@@ -33,20 +33,20 @@ export const Introduction: React.FC = () => {
 			setHello((prev) =>
 				prev
 					.split("")
-					.map((_, index) =>
+					.map((str, index) =>
 						index < iterations
 							? aboutme.introduction.hello[index]
-							: randomAlphabet(),
+							: randomAlphabet(str),
 					)
 					.join(""),
 			);
 			setIam((prev) =>
 				prev
 					.split("")
-					.map((_, index) =>
+					.map((str, index) =>
 						index < iterations
 							? aboutme.introduction.iam[index]
-							: randomAlphabet(),
+							: randomAlphabet(str),
 					)
 					.join(""),
 			);
