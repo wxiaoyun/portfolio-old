@@ -1,6 +1,15 @@
 export const NUSLogo: Img = {
   src: "National_University_of_Singapore_Logo.png",
   alt: "National University of Singapore Logo",
+  height: 339,
+  width: 735,
+};
+
+export const NUSCLogo: Img = {
+  src: "NUS_College_Logo.png",
+  alt: "NUS College Logo",
+  height: 186,
+  width: 708,
 };
 
 export const VectorPortraitLightMode: Img = {
@@ -36,5 +45,6 @@ export const TailwindCSSLogo: Img = {
 export const DigitalLib: Img = {
   src: "/digital_library.png",
   alt: "Digital Library",
+  height: 1024,
+  width: 1792,
 };
-

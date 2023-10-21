@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/card";
 import { OpenInNewWindowIcon } from "@radix-ui/react-icons";
 import { fadeInAnimation } from "@/lib/animation";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 TimeAgo.addDefaultLocale(en);
 const timeAgo = new TimeAgo("en-US");
@@ -41,11 +42,11 @@ export const BlogCard: React.FC<{ item: MediumItem }> = ({ item }) => {
 				</CardHeader>
 
 				<CardContent className="flex flex-col gap-3">
-					<img
-						src={item.thumbnail}
-						alt={item.title}
-						className="w-full rounded-sm min-h-[200px] object-contain"
-					/>
+					<div className="overflow-hidden rounded-sm">
+						<AspectRatio ratio={16 / 9}>
+							<img src={item.thumbnail} alt={item.title} />
+						</AspectRatio>
+					</div>
 
 					<p className="leading-7 [&:not(:first-child)]:mt-6">
 						{firstParagraph}..

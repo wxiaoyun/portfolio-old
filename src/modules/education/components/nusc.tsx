@@ -14,7 +14,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Separator } from "@/components/ui/separator";
-import { education } from "@/constants";
+import { NUSCLogo, education } from "@/constants";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 export const NUSCollege: React.FC = () => {
   const [value, setValue] = React.useState(["nusc"]);
@@ -24,12 +25,12 @@ export const NUSCollege: React.FC = () => {
       <Accordion type="multiple" value={value} onValueChange={setValue}>
         <AccordionItem value="nusc">
           <AccordionTrigger className="pr-3">
-            <CardHeader className="text-left">
-              <img
-                src="NUS_College_Logo.png"
-                alt="NUS College Logo"
-                className="w-full px-6 mb-6 min-h-[200px] object-contain"
-              />
+            <CardHeader className="text-left w-full">
+              <div className="mx-6 mb-6">
+                <AspectRatio ratio={NUSCLogo.width! / NUSCLogo!.height!}>
+                  <img src={NUSCLogo.src} alt={NUSCLogo.alt} />
+                </AspectRatio>
+              </div>
 
               <CardTitle>{education.nusc.title}</CardTitle>
 
