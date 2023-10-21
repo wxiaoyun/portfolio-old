@@ -23,7 +23,7 @@ export const NavTab: React.FC<{
       {currentPath === link.path && (
         <motion.div
           layoutId="active-pill"
-          className="absolute inset-0 bg-primary"
+          className="absolute inset-0 bg-primary z-[5]"
           style={{ borderRadius: 9999 }}
           transition={{ duration: 0.6, type: "spring" }}
         />

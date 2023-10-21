@@ -33,20 +33,20 @@ export const Introduction: React.FC = () => {
 			setHello((prev) =>
 				prev
 					.split("")
-					.map((str, index) =>
+					.map((char, index) =>
 						index < iterations
 							? aboutme.introduction.hello[index]
-							: randomAlphabet(str),
+							: randomAlphabet(char),
 					)
 					.join(""),
 			);
 			setIam((prev) =>
 				prev
 					.split("")
-					.map((str, index) =>
+					.map((char, index) =>
 						index < iterations
 							? aboutme.introduction.iam[index]
-							: randomAlphabet(str),
+							: randomAlphabet(char),
 					)
 					.join(""),
 			);
@@ -72,14 +72,14 @@ export const Introduction: React.FC = () => {
 			<div className="flex flex-col lg:flex-row justify-center items-center gap-12">
 				<AnimatePresence mode="wait">
 					<motion.img
-						className="max-h-52 max-w-52 aspect-square transition-shadow duration-500 shadow-xl hover:shadow-2xl rounded-full"
+						className="h-52 w-52 aspect-square transition-shadow duration-500 shadow-xl hover:shadow-2xl rounded-full"
 						key={portrait.src}
 						src={portrait.src}
 						alt={portrait.alt}
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						exit={{ opacity: 0 }}
-						transition={{ duration: 0.4, ease: "easeIn" }}
+						transition={{ duration: 0.5, ease: "easeInOut" }}
 					/>
 				</AnimatePresence>
 
