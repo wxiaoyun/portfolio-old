@@ -18,7 +18,7 @@ export const routeSlice = createSlice({
       const nextIndex = RouteArray.findIndex(
         (route) => route === action.payload,
       );
-      state.direction = nextIndex - currentIndex > 0 ? 1 : -1;
+      state.direction = nextIndex - currentIndex;
       state.currentPath = action.payload;
     },
   },

@@ -13,19 +13,27 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { cca } from "@/constants";
+import { TopAccordionDropDownTime, cca } from "@/constants";
 import { CvwoLogo } from "@/modules";
 import { Separator } from "@/components/ui/separator";
 import { OpenInNewWindowIcon } from "@radix-ui/react-icons";
 
 export const CvwoExco: React.FC = () => {
-  const [value, setValue] = React.useState(["cvwoexco"]);
+  const [value, setValue] = React.useState<string[]>([]);
+
+  React.useEffect(() => {
+    const timeoutID = setTimeout(() => {
+      setValue([cca.cvwoexco.accordion_value]);
+    }, TopAccordionDropDownTime);
+
+    return () => clearTimeout(timeoutID);
+  }, []);
 
   return (
     <div className="w-full flex flex-col gap-3 items-start">
       <Card className="w-full bg-primary-foreground border-none shadow-lg">
         <Accordion type="multiple" value={value} onValueChange={setValue}>
-          <AccordionItem value="cvwoexco">
+          <AccordionItem value={cca.cvwoexco.accordion_value}>
             <AccordionTrigger className="pr-3">
               <CardHeader className="text-left w-full">
                 <CvwoLogo />
@@ -53,7 +61,7 @@ export const CvwoExco: React.FC = () => {
                   </a>
 
                   <Separator />
-                  
+
                   {cca.cvwoexco.items.map((item, index) => (
                     <div key={index}>
                       <h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
@@ -69,7 +77,7 @@ export const CvwoExco: React.FC = () => {
                       </ul>
                     </div>
                   ))}
-                  
+
                   <Separator />
                 </div>
               </CardContent>

@@ -14,18 +14,26 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { experience } from "@/constants";
+import { TopAccordionDropDownTime, experience } from "@/constants";
 import { CvwoLogo } from "@/modules";
 import { OpenInNewWindowIcon } from "@radix-ui/react-icons";
 
 export const Cvwo: React.FC = () => {
-  const [value, setValue] = React.useState(["cvwo"]);
+  const [value, setValue] = React.useState<string[]>([]);
+
+  React.useEffect(() => {
+    const timeoutID = setTimeout(() => {
+      setValue([experience.cvwo.accordion_value]);
+    }, TopAccordionDropDownTime);
+
+    return () => clearTimeout(timeoutID);
+  }, []);
 
   return (
     <div className="w-full flex flex-col gap-3 items-start">
       <Card className="w-full bg-primary-foreground border-none shadow-lg">
         <Accordion type="multiple" value={value} onValueChange={setValue}>
-          <AccordionItem value="cvwo">
+          <AccordionItem value={experience.cvwo.accordion_value}>
             <AccordionTrigger className="pr-3">
               <CardHeader className="text-left w-full">
                 <CvwoLogo />

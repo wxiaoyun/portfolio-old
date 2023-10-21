@@ -8,3 +8,4 @@ export * from "./experience";
 export * from "./link";
 export * from "./image";
 export * from "./routes";
+export * from "./animation";
