@@ -14,19 +14,27 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { project  } from "@/constants";
+import { TopAccordionDropDownTime, project } from "@/constants";
 import { GithubIcon, PortfolioLogo } from "@/modules";
 
 const iconSize = 15;
 
 export const PortfolioPage: React.FC = () => {
-  const [value, setValue] = React.useState(["portfolio-page"]);
+  const [value, setValue] = React.useState<string[]>([]);
+
+  React.useEffect(() => {
+    const timeoutID = setTimeout(() => {
+      setValue([project.portfolio.accordion_value]);
+    }, TopAccordionDropDownTime);
+
+    return () => clearTimeout(timeoutID);
+  }, []);
 
   return (
     <div className="w-full flex flex-col gap-3 items-start">
       <Card className="w-full bg-primary-foreground border-none shadow-lg">
         <Accordion type="multiple" value={value} onValueChange={setValue}>
-          <AccordionItem value="portfolio-page">
+          <AccordionItem value={project.portfolio.accordion_value}>
             <AccordionTrigger className="pr-3">
               <CardHeader className="text-left w-full">
                 <PortfolioLogo />

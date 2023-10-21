@@ -17,5 +17,6 @@ export const cca = {
     officialpage: "Official page",
     time: "Sep 2023 - Ongoing | Singapore",
     CVWO_PAGE_URL: "https://www.comp.nus.edu.sg/~vwo/",
+    accordion_value: "cvwoexco",
   },
 };

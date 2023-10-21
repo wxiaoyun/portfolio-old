@@ -38,5 +38,6 @@ export const experience = {
     time: "May 2023 - Aug 2023 | Singapore",
     CVWO_PAGE_URL: "https://www.comp.nus.edu.sg/~vwo/",
     CVWO_PROJECT_URL: "https://www.comp.nus.edu.sg/~vwo/projects/2023-cms.html",
+    accordion_value: "cvwo",
   },
 };

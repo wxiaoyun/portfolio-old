@@ -22,6 +22,7 @@ export const education = {
     },
     gpa: "GPA: 4.68/5.0",
     time: "Aug 2022 - May 2026 | Singapore",
+    accordion_value: "nus",
   },
   nusc: {
     title: "NUS Undergraduate Honours College",
