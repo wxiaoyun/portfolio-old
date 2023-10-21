@@ -15,6 +15,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { DigitalLib, project } from "@/constants";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 export const CommunityLib: React.FC = () => {
   const [value, setValue] = React.useState(["community-lib"]);
@@ -25,11 +26,15 @@ export const CommunityLib: React.FC = () => {
         <AccordionItem value="community-lib">
           <AccordionTrigger className="pr-3">
             <CardHeader className="text-left w-full">
-              <img
-                src={DigitalLib.src}
-                alt={DigitalLib.alt}
-                className="max-h-72 w-full rounded-md mx-auto mb-6 shadow-lg"
-              />
+              <div className="mx-6 mb-6 bg-[#303A42] rounded-md shadow-lg overflow-hidden">
+                <AspectRatio ratio={DigitalLib.width! / DigitalLib!.height!}>
+                  <img
+                    src={DigitalLib.src}
+                    alt={DigitalLib.alt}
+                  />
+                </AspectRatio>
+              </div>
+              
               <CardTitle>{project.communitylib.title}</CardTitle>
 
               <CardDescription>
