@@ -27,7 +27,7 @@ export const Navbar: React.FC = () => {
 
 			<Button variant={"link"} size="sm" className="hidden lg:inline text-lg">
 				<a href={RESUME_URL} download>
-					Resume
+					{"Resume"}
 				</a>
 			</Button>
 
