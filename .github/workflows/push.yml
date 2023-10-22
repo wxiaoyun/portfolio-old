@@ -68,4 +68,13 @@ jobs:
       - name: Install dependencies and run deploy script
         run: |
           bun install
+
+      - name: Configure git
+        run: |
+          git config user.name "${{ secrets.GIT_USER_NAME }}"
+          git config user.email "${{ secrets.GIT_USER_EMAIL }}"
+
+      - name: Run deploy script
+        run: |
           bun run deploy
+
