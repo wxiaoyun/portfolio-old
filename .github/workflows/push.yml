@@ -68,13 +68,11 @@ jobs:
       - name: Install dependencies and run deploy script
         run: |
           bun install
+          bun run build
 
-      - name: Configure git
-        run: |
-          git config user.name "${{ secrets.GIT_USER_NAME }}"
-          git config user.email "${{ secrets.GIT_USER_EMAIL }}"
-
-      - name: Run deploy script
-        run: |
-          bun run deploy
-
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}
+          publish_dir: ./dist
+        
