@@ -46,13 +46,7 @@ This will start the development server, and you can access the application at `h
 
 ## Deploying to Github Pages
 
-- Edit `packages.json`: Change `"homepage": "<url_of_your_github_page>"`
-- Example: `"homepage": "https://ForAeons.github.io/ForAeons"`
-- Lastly, run the following command:
-
-```bash
-bun run deploy
-```
+- Push to master branch will automatically trigger deployment to github pages
 
 ## Built With
 
