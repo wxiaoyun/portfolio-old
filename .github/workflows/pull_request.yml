@@ -6,7 +6,7 @@ on:
 
 jobs:
   eslint:
-    name: Run eslint scanning
+    name: Run eslint
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -30,7 +30,7 @@ jobs:
           --output-file eslint-results.sarif
           
   tests:
-    name: tests
+    name: Run tests
     runs-on: ubuntu-latest
 
     steps:
