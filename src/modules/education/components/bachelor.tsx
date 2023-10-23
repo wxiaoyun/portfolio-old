@@ -51,21 +51,67 @@ export const Bachelor: React.FC = () => {
               <CardContent className="flex flex-col gap-6">
                 <Separator orientation="horizontal" />
 
-                <h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
-                  {education.nus.coursework.title}
+                <p className="text-sm text-muted-foreground">
+                  {education.nus.gpa}
+                </p>
+                
+                <h4 className="scroll-m-20 text-left text-lg font-mono font-semibold tracking-tight">
+                  {education.nus.compsci.title}
                 </h4>
+              
+                <ul className="flex flex-col gap-2 font-mono">
+                  {education.nus.compsci.courselist.map((item, index) => (
+                    <li key={index} className="flex">
+                      <small className="w-5/6 truncate text-sm leading-none">
+                        {`${item.code} ${item.name}`}
+                      </small>
 
-                <ul className="ml-4">
-                  {education.nus.coursework.courselist.map((item, index) => (
-                    <li key={index} className="list-disc">
-                      <p className="inline">{item}</p>
+                      <small className="w-1/6 text-right text-sm leading-none">
+                        {item.grade}
+                      </small>
                     </li>
                   ))}
                 </ul>
 
-                <p className="text-sm text-muted-foreground">
-                  {education.nus.gpa}
-                </p>
+                <Separator orientation="horizontal" />
+
+                <h4 className="scroll-m-20 text-left text-lg font-sans font-semibold tracking-tight">
+                  {education.nus.math.title}
+                </h4>
+              
+                <ul className="flex flex-col gap-2">
+                  {education.nus.math.courselist.map((item, index) => (
+                    <li key={index} className="flex">
+                      <small className="w-5/6 truncate text-sm font-normal leading-none">
+                        {`${item.code} ${item.name}`}
+                      </small>
+
+                      <small className="w-1/6 text-right text-sm font-medium leading-none">
+                        {item.grade}
+                      </small>
+                    </li>
+                  ))}
+                </ul>
+
+                <Separator orientation="horizontal" />
+
+                <h4 className="scroll-m-20 text-left text-lg font-semibold tracking-tight">
+                  {education.nus.others.title}
+                </h4>
+              
+                <ul className="flex flex-col gap-2">
+                  {education.nus.others.courselist.map((item, index) => (
+                    <li key={index} className="flex">
+                      <small className="w-5/6 truncate text-sm font-normal leading-none">
+                        {`${item.code} ${item.name}`}
+                      </small>
+
+                      <small className="w-1/6 text-right text-sm font-medium leading-none">
+                        {item.grade}
+                      </small>
+                    </li>
+                  ))}
+                </ul>
 
                 <Separator />
               </CardContent>

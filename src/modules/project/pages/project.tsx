@@ -11,7 +11,7 @@ export const Project: React.FC = () => {
 	const routeState = useSelector((state: RootState) => state.route);
 	return (
 		<motion.div
-			className="flex flex-col gap-y-12 items-center mx-6 w-full"
+			className="flex flex-col gap-y-12 items-center px-6 w-full"
 			variants={slideVariants}
 			custom={routeState.direction}
 			initial="enter"
