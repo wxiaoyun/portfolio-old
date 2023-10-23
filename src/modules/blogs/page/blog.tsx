@@ -31,7 +31,7 @@ export const Blog: React.FC = () => {
 
 	return (
 		<motion.div
-			className="flex flex-col  items-center mx-6 w-full"
+			className="flex flex-col  items-center px-6 w-full"
 			variants={slideVariants}
 			custom={routeState.direction}
 			initial="enter"

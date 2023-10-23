@@ -42,17 +42,23 @@ export const NUSCollege: React.FC = () => {
             <CardContent className="flex flex-col gap-6">
               <Separator />
 
-              <h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
-                {education.nusc.coursework.title}
-              </h4>
+                <h4 className="scroll-m-20 text-left text-lg font-serif font-semibold tracking-tight">
+                  {education.nusc.coursework.title}
+                </h4>
+              
+                <ul className="flex flex-col gap-2 font-serif">
+                  {education.nusc.coursework.courselist.map((item, index) => (
+                    <li key={index} className="flex">
+                      <small className="w-5/6 truncate text-sm font-normal leading-none">
+                        {`${item.code} ${item.name}`}
+                      </small>
 
-              <ul className="ml-4">
-                {education.nusc.coursework.courselist.map((item, index) => (
-                  <li key={index} className="list-disc">
-                    <p className="inline">{item}</p>
-                  </li>
-                ))}
-              </ul>
+                      <small className="w-1/6 text-right text-sm font-medium leading-none">
+                        {item.grade}
+                      </small>
+                    </li>
+                  ))}
+                </ul>
 
               <Separator />
             </CardContent>
