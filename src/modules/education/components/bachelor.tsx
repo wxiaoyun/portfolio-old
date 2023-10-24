@@ -1,4 +1,5 @@
 import React from "react";
+import { SewingPinFilledIcon } from "@radix-ui/react-icons";
 import { Separator } from "@/components/ui/separator";
 import {
   Card,
@@ -14,8 +15,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { education, NUSLogo, TopAccordionDropDownTime } from "@/constants";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { education, NUSLogo, TopAccordionDropDownTimeout } from "@/constants";
 
 export const Bachelor: React.FC = () => {
   const [value, setValue] = React.useState<string[]>([]);
@@ -23,7 +24,7 @@ export const Bachelor: React.FC = () => {
   React.useEffect(() => {
     const timeoutID = setTimeout(() => {
       setValue([education.nus.accordion_value]);
-    }, TopAccordionDropDownTime);
+    }, TopAccordionDropDownTimeout);
 
     return () => clearTimeout(timeoutID);
   }, []);
@@ -54,19 +55,19 @@ export const Bachelor: React.FC = () => {
                 <p className="text-sm text-muted-foreground">
                   {education.nus.gpa}
                 </p>
-                
-                <h4 className="scroll-m-20 text-left text-lg font-mono font-semibold tracking-tight">
+
+                <h4 className="scroll-m-20 text-left text-lg font-semibold tracking-tight">
                   {education.nus.compsci.title}
                 </h4>
-              
-                <ul className="flex flex-col gap-2 font-mono">
+
+                <ul className="flex flex-col gap-2">
                   {education.nus.compsci.courselist.map((item, index) => (
                     <li key={index} className="flex">
-                      <small className="w-5/6 truncate text-sm leading-none">
+                      <small className="w-5/6 truncate text-sm font-normal leading-none">
                         {`${item.code} ${item.name}`}
                       </small>
 
-                      <small className="w-1/6 text-right text-sm leading-none">
+                      <small className="w-1/6 text-right text-sm font-medium leading-none">
                         {item.grade}
                       </small>
                     </li>
@@ -78,7 +79,7 @@ export const Bachelor: React.FC = () => {
                 <h4 className="scroll-m-20 text-left text-lg font-sans font-semibold tracking-tight">
                   {education.nus.math.title}
                 </h4>
-              
+
                 <ul className="flex flex-col gap-2">
                   {education.nus.math.courselist.map((item, index) => (
                     <li key={index} className="flex">
@@ -98,7 +99,7 @@ export const Bachelor: React.FC = () => {
                 <h4 className="scroll-m-20 text-left text-lg font-semibold tracking-tight">
                   {education.nus.others.title}
                 </h4>
-              
+
                 <ul className="flex flex-col gap-2">
                   {education.nus.others.courselist.map((item, index) => (
                     <li key={index} className="flex">
@@ -115,9 +116,13 @@ export const Bachelor: React.FC = () => {
 
                 <Separator />
               </CardContent>
-              <CardFooter>
-                <h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
-                  {education.nusc.time}
+              <CardFooter className="flex">
+                <h4 className="scroll-m-20 text-sm lg:text-lg font-semibold tracking-tight">
+                  {education.nus.time}
+                </h4>
+                <SewingPinFilledIcon className="ml-auto w-4 h-4" />
+                <h4 className="scroll-m-20 text-right text-sm lg:text-lg font-semibold tracking-tight">
+                  {education.nus.location}
                 </h4>
               </CardFooter>
             </AccordionContent>

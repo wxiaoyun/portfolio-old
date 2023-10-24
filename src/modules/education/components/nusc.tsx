@@ -16,6 +16,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { NUSCLogo, education } from "@/constants";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { SewingPinFilledIcon } from "@radix-ui/react-icons";
 
 export const NUSCollege: React.FC = () => {
   const [value, setValue] = React.useState(["nusc"]);
@@ -42,11 +43,11 @@ export const NUSCollege: React.FC = () => {
             <CardContent className="flex flex-col gap-6">
               <Separator />
 
-                <h4 className="scroll-m-20 text-left text-lg font-serif font-semibold tracking-tight">
+                <h4 className="scroll-m-20 text-left text-lg font-semibold tracking-tight">
                   {education.nusc.coursework.title}
                 </h4>
               
-                <ul className="flex flex-col gap-2 font-serif">
+                <ul className="flex flex-col gap-2">
                   {education.nusc.coursework.courselist.map((item, index) => (
                     <li key={index} className="flex">
                       <small className="w-5/6 truncate text-sm font-normal leading-none">
@@ -62,11 +63,15 @@ export const NUSCollege: React.FC = () => {
 
               <Separator />
             </CardContent>
-            <CardFooter>
-              <h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
-                {education.nusc.time}
-              </h4>
-            </CardFooter>
+              <CardFooter className="flex">
+                <h4 className="scroll-m-20 text-sm lg:text-lg font-semibold tracking-tight">
+                  {education.nus.time}
+                </h4>
+                <SewingPinFilledIcon className="ml-auto w-4 h-4" />
+                <h4 className="scroll-m-20 text-right text-sm lg:text-lg font-semibold tracking-tight">
+                  {education.nus.location}
+                </h4>
+              </CardFooter>
           </AccordionContent>
         </AccordionItem>
       </Accordion>

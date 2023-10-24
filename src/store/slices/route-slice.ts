@@ -2,7 +2,7 @@ import { RouteArray } from "@/constants";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 const initialState: AppRouteState = {
-  currentPath: "/",
+  currentPath: "about",
   direction: 0,
 };
 

@@ -14,7 +14,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { TopAccordionDropDownTime, project } from "@/constants";
+import { TopAccordionDropDownTimeout, project } from "@/constants";
 import { GithubIcon, PortfolioLogo } from "@/modules";
 
 const iconSize = 15;
@@ -25,7 +25,7 @@ export const PortfolioPage: React.FC = () => {
   React.useEffect(() => {
     const timeoutID = setTimeout(() => {
       setValue([project.portfolio.accordion_value]);
-    }, TopAccordionDropDownTime);
+    }, TopAccordionDropDownTimeout);
 
     return () => clearTimeout(timeoutID);
   }, []);
@@ -67,7 +67,7 @@ export const PortfolioPage: React.FC = () => {
                 <Separator orientation="horizontal" />{" "}
               </CardContent>
               <CardFooter className="flex justify-between items-center">
-                <h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
+                <h4 className="scroll-m-20 text-sm lg:text-lg  font-semibold tracking-tight">
                   {project.portfolio.time}
                 </h4>
               </CardFooter>

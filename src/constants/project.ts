@@ -19,7 +19,8 @@ export const project = {
         ],
       },
     ],
-    time: "Aug 2023 - Ongoing | Singapore & Cambodia",
+    time: "Aug 2023 - Ongoing",
+    location: "Cambodia",
   },
   portfolio: {
     title: "Portfolio Website",

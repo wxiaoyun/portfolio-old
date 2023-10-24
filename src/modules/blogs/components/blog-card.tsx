@@ -24,7 +24,7 @@ export const BlogCard: React.FC<{ item: MediumItem }> = ({ item }) => {
 	const firstParagraph = paragraphs[0].textContent;
 	return (
 		<motion.div
-			className="w-full mt-12"
+			className="w-full mt-8 lg:mt-12"
 			initial={{ opacity: 0, height: 0 }}
 			animate={fadeInAnimation}
 		>
