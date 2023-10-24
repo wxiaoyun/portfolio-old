@@ -9,13 +9,15 @@ export const cca = {
       {
         title: "President",
         paragraphs: [
+          "As the President of CVWO, I lead the Executive Committee in the planning and execution of CVWO's activities before the start of each summer.",
           "Oversee the recruitment and application process for CVWO's 2024 Summer Internship program.",
           "Manage marketing, outreach, and operations for CVWO.",
         ],
       },
     ],
     officialpage: "Official page",
-    time: "Sep 2023 - Ongoing | Singapore",
+    time: "Sep 2023 - Ongoing",
+    location: "Singapore",
     CVWO_PAGE_URL: "https://www.comp.nus.edu.sg/~vwo/",
     accordion_value: "cvwoexco",
   },

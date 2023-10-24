@@ -1,1 +1,1 @@
-export const TopAccordionDropDownTime = 300;
+export const TopAccordionDropDownTimeout = 300;

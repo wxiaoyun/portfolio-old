@@ -18,10 +18,6 @@ module.exports = {
         "2xl": "1400px",
       },
     },
-    fontFamily: {
-      mono: ["FiraCodeNerdFontMono", ...defaultTheme.fontFamily.mono],
-      serif: ["DancingScript", ...defaultTheme.fontFamily.sans],
-    },
     extend: {
       colors: {
         border: "hsl(var(--border))",

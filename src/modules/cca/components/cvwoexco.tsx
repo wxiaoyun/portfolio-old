@@ -1,5 +1,10 @@
 import React from "react";
 import {
+  OpenInNewWindowIcon,
+  SewingPinFilledIcon,
+} from "@radix-ui/react-icons";
+import { Separator } from "@/components/ui/separator";
+import {
   Card,
   CardContent,
   CardDescription,
@@ -13,10 +18,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { TopAccordionDropDownTime, cca } from "@/constants";
+import { TopAccordionDropDownTimeout, cca } from "@/constants";
 import { CvwoLogo } from "@/modules";
-import { Separator } from "@/components/ui/separator";
-import { OpenInNewWindowIcon } from "@radix-ui/react-icons";
 
 export const CvwoExco: React.FC = () => {
   const [value, setValue] = React.useState<string[]>([]);
@@ -24,7 +27,7 @@ export const CvwoExco: React.FC = () => {
   React.useEffect(() => {
     const timeoutID = setTimeout(() => {
       setValue([cca.cvwoexco.accordion_value]);
-    }, TopAccordionDropDownTime);
+    }, TopAccordionDropDownTimeout);
 
     return () => clearTimeout(timeoutID);
   }, []);
@@ -81,9 +84,13 @@ export const CvwoExco: React.FC = () => {
                   <Separator />
                 </div>
               </CardContent>
-              <CardFooter>
-                <h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
+              <CardFooter className="flex">
+                <h4 className="scroll-m-20 text-sm lg:text-lg font-semibold tracking-tight">
                   {cca.cvwoexco.time}
+                </h4>
+                <SewingPinFilledIcon className="ml-auto w-4 h-4" />
+                <h4 className="scroll-m-20 text-right text-sm lg:text-lg font-semibold tracking-tight">
+                  {cca.cvwoexco.location}
                 </h4>
               </CardFooter>
             </AccordionContent>

@@ -11,8 +11,8 @@ export const App: React.FC = () => {
 
   React.useEffect(() => {
     if (window.location.pathname === "/") {
-      navigate(`/${Routes.aboutme}`);
       dispatch(routeSlice.actions.changeRoute(Routes.aboutme));
+      navigate(`/${Routes.aboutme}`);
     } // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

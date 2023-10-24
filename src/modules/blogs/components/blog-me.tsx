@@ -7,7 +7,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 export const BlogMe: React.FC<{ feed: MediumFeed }> = ({ feed }) => {
 	return (
 		<motion.div
-			className="w-full mt-12"
+			className="w-full mt-8 lg:mt-12"
 			initial={{ opacity: 0, height: 0 }}
 			animate={fadeInAnimation}
 		>

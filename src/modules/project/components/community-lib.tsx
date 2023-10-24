@@ -1,4 +1,5 @@
 import React from "react";
+import { SewingPinFilledIcon } from "@radix-ui/react-icons";
 import { Separator } from "@/components/ui/separator";
 import {
   Card,
@@ -14,8 +15,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { DigitalLib, project } from "@/constants";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { DigitalLib, project } from "@/constants";
 
 export const CommunityLib: React.FC = () => {
   const [value, setValue] = React.useState(["community-lib"]);
@@ -71,9 +72,13 @@ export const CommunityLib: React.FC = () => {
 
               <Separator />
             </CardContent>
-            <CardFooter>
-              <h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
+            <CardFooter className="flex">
+              <h4 className="scroll-m-20 text-sm lg:text-lg font-semibold tracking-tight">
                 {project.communitylib.time}
+              </h4>
+              <SewingPinFilledIcon className="w-4 h-4 ml-auto" />
+              <h4 className="scroll-m-20 text-right text-sm lg:text-lg font-semibold tracking-tight">
+                {project.communitylib.location}
               </h4>
             </CardFooter>
           </AccordionContent>
