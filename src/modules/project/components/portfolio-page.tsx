@@ -17,7 +17,8 @@ import {
 import { TopAccordionDropDownTimeout, project } from "@/constants";
 import { GithubIcon, PortfolioLogo } from "@/modules";
 
-const iconSize = 15;
+const ghIconSize = 15;
+const iconSize = 30;
 
 export const PortfolioPage: React.FC = () => {
   const [value, setValue] = React.useState<string[]>([]);
@@ -31,7 +32,6 @@ export const PortfolioPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full flex flex-col gap-3 items-start">
       <Card className="w-full bg-primary-foreground border-none shadow-lg">
         <Accordion type="multiple" value={value} onValueChange={setValue}>
           <AccordionItem value={project.portfolio.accordion_value}>
@@ -49,7 +49,8 @@ export const PortfolioPage: React.FC = () => {
 
             <AccordionContent>
               <CardContent className="flex flex-col gap-6">
-                <Separator orientation="horizontal" />
+                <Separator />
+
                 <p className="text-sm text-muted-foreground">
                   {project.portfolio.p1}
                 </p>
@@ -60,11 +61,31 @@ export const PortfolioPage: React.FC = () => {
                   className="mx-auto flex items-center gap-2 hover:opacity-70 transition"
                 >
                   <p className="text-sm text-muted-foreground">Source code</p>
-                  <GithubIcon size={iconSize} />
+                  <GithubIcon size={ghIconSize} />
                 </a>
-                <Separator orientation="horizontal" />
+
+                <Separator />
+
                 <p className="leading-7">{project.portfolio.p2}</p>
-                <Separator orientation="horizontal" />{" "}
+
+                <Separator />
+
+                <h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
+                  Tech Stack
+                </h4>
+                <div className="flex flex-wrap gap-2">
+                  {project.portfolio.techstack.map((item, index) => (
+                    <img
+                      key={index}
+                      src={item.src}
+                      alt={item.alt}
+                      height={iconSize}
+                      width={iconSize}
+                    />
+                  ))}
+                </div>
+
+                <Separator />
               </CardContent>
               <CardFooter className="flex justify-between items-center">
                 <h4 className="scroll-m-20 text-sm lg:text-lg  font-semibold tracking-tight">
@@ -75,7 +96,6 @@ export const PortfolioPage: React.FC = () => {
           </AccordionItem>
         </Accordion>
       </Card>
-    </div>
   );
 };
 

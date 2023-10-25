@@ -18,6 +18,8 @@ import {
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { DigitalLib, project } from "@/constants";
 
+const iconSize = 30
+
 export const CommunityLib: React.FC = () => {
   const [value, setValue] = React.useState(["community-lib"]);
 
@@ -52,7 +54,7 @@ export const CommunityLib: React.FC = () => {
                 {project.communitylib.details}
               </p>
 
-              <Separator orientation="horizontal" />
+              <Separator />
 
               {project.communitylib.items.map((item, index) => (
                 <div key={index}>
@@ -69,6 +71,23 @@ export const CommunityLib: React.FC = () => {
                   </ul>
                 </div>
               ))}
+
+                <Separator />
+
+                <h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
+                  Tech Stack
+                </h4>
+                <div className="flex flex-wrap gap-2">
+                  {project.communitylib.techstack.map((item, index) => (
+                    <img
+                      key={index}
+                      src={item.src}
+                      alt={item.alt}
+                      height={iconSize}
+                      width={iconSize}
+                    />
+                  ))}
+                </div>
 
               <Separator />
             </CardContent>
