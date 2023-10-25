@@ -1,3 +1,5 @@
+import * as Imgs from "./image"
+
 export const experience = {
   title: "Experiences",
   cvwo: {
@@ -32,6 +34,13 @@ export const experience = {
         title: "Deputy Team Lead",
         paragraphs: ["Preform code reviews and manage team morale."],
       },
+    ],
+    techstack: [
+      Imgs.TypeScriptLogo,
+      Imgs.GoLogo,
+      Imgs.ReactLogo,
+      Imgs.ReduxLogo,
+      Imgs.PostgreSQLLogo,
     ],
     officialpage: "Official page",
     mywork: "My work",

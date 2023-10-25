@@ -30,7 +30,6 @@ export const Bachelor: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full flex flex-col gap-3 items-start">
       <Card className="w-full bg-primary-foreground border-none shadow-lg">
         <Accordion type="multiple" value={value} onValueChange={setValue}>
           <AccordionItem value={education.nus.accordion_value}>
@@ -60,14 +59,14 @@ export const Bachelor: React.FC = () => {
                   {education.nus.compsci.title}
                 </h4>
 
-                <ul className="flex flex-col gap-2">
+                <ul className="flex flex-col">
                   {education.nus.compsci.courselist.map((item, index) => (
                     <li key={index} className="flex">
-                      <small className="w-5/6 truncate text-sm font-normal leading-none">
+                      <small className="w-5/6 truncate text-sm font-normal">
                         {`${item.code} ${item.name}`}
                       </small>
 
-                      <small className="w-1/6 text-right text-sm font-medium leading-none">
+                      <small className="w-1/6 text-right text-sm font-medium">
                         {item.grade}
                       </small>
                     </li>
@@ -80,14 +79,14 @@ export const Bachelor: React.FC = () => {
                   {education.nus.math.title}
                 </h4>
 
-                <ul className="flex flex-col gap-2">
+                <ul className="flex flex-col">
                   {education.nus.math.courselist.map((item, index) => (
                     <li key={index} className="flex">
-                      <small className="w-5/6 truncate text-sm font-normal leading-none">
+                      <small className="w-5/6 truncate text-sm font-normal">
                         {`${item.code} ${item.name}`}
                       </small>
 
-                      <small className="w-1/6 text-right text-sm font-medium leading-none">
+                      <small className="w-1/6 text-right text-sm font-medium">
                         {item.grade}
                       </small>
                     </li>
@@ -100,14 +99,14 @@ export const Bachelor: React.FC = () => {
                   {education.nus.others.title}
                 </h4>
 
-                <ul className="flex flex-col gap-2">
+                <ul className="flex flex-col">
                   {education.nus.others.courselist.map((item, index) => (
                     <li key={index} className="flex">
-                      <small className="w-5/6 truncate text-sm font-normal leading-none">
+                      <small className="w-5/6 truncate text-sm font-normal">
                         {`${item.code} ${item.name}`}
                       </small>
 
-                      <small className="w-1/6 text-right text-sm font-medium leading-none">
+                      <small className="w-1/6 text-right text-sm font-medium">
                         {item.grade}
                       </small>
                     </li>
@@ -129,7 +128,6 @@ export const Bachelor: React.FC = () => {
           </AccordionItem>
         </Accordion>
       </Card>
-    </div>
   );
 };
 

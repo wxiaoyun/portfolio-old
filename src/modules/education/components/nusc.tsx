@@ -47,14 +47,14 @@ export const NUSCollege: React.FC = () => {
                   {education.nusc.coursework.title}
                 </h4>
               
-                <ul className="flex flex-col gap-2">
+                <ul className="flex flex-col">
                   {education.nusc.coursework.courselist.map((item, index) => (
                     <li key={index} className="flex">
-                      <small className="w-5/6 truncate text-sm font-normal leading-none">
+                      <small className="w-5/6 truncate text-sm font-normal">
                         {`${item.code} ${item.name}`}
                       </small>
 
-                      <small className="w-1/6 text-right text-sm font-medium leading-none">
+                      <small className="w-1/6 text-right text-sm font-medium">
                         {item.grade}
                       </small>
                     </li>

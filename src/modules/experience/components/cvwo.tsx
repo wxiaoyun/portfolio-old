@@ -18,8 +18,13 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { TopAccordionDropDownTimeout, experience } from "@/constants";
+import {
+  TopAccordionDropDownTimeout,
+  experience,
+} from "@/constants";
 import { CvwoLogo } from "@/modules";
+
+const iconSize = 30;
 
 export const Cvwo: React.FC = () => {
   const [value, setValue] = React.useState<string[]>([]);
@@ -33,7 +38,6 @@ export const Cvwo: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full flex flex-col gap-3 items-start">
       <Card className="w-full bg-primary-foreground border-none shadow-lg">
         <Accordion type="multiple" value={value} onValueChange={setValue}>
           <AccordionItem value={experience.cvwo.accordion_value}>
@@ -47,7 +51,7 @@ export const Cvwo: React.FC = () => {
 
             <AccordionContent>
               <CardContent className="flex flex-col gap-6">
-                <Separator orientation="horizontal" />
+                <Separator/>
                 <p className="text-sm text-muted-foreground">
                   {experience.cvwo.description}
                 </p>
@@ -73,7 +77,7 @@ export const Cvwo: React.FC = () => {
                   </a>
                 </div>
 
-                <Separator orientation="horizontal" />
+                <Separator/>
 
                 {experience.cvwo.items.map((item, index) => (
                   <div key={index}>
@@ -91,7 +95,24 @@ export const Cvwo: React.FC = () => {
                   </div>
                 ))}
 
-                <Separator orientation="horizontal" />
+                <Separator/>
+
+                <h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
+                  Tech Stack
+                </h4>
+                <div className="flex flex-wrap gap-2">
+                  {experience.cvwo.techstack.map((item, index) => (
+                    <img
+                      key={index}
+                      src={item.src}
+                      alt={item.alt}
+                      height={iconSize}
+                      width={iconSize}
+                    />
+                  ))}
+                </div>
+
+                <Separator/>
               </CardContent>
               <CardFooter className="flex">
                 <h4 className="scroll-m-20 text-sm lg:text-lg font-semibold tracking-tight">
@@ -106,7 +127,6 @@ export const Cvwo: React.FC = () => {
           </AccordionItem>
         </Accordion>
       </Card>
-    </div>
   );
 };
 

@@ -33,7 +33,6 @@ export const CvwoExco: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full flex flex-col gap-3 items-start">
       <Card className="w-full bg-primary-foreground border-none shadow-lg">
         <Accordion type="multiple" value={value} onValueChange={setValue}>
           <AccordionItem value={cca.cvwoexco.accordion_value}>
@@ -97,7 +96,6 @@ export const CvwoExco: React.FC = () => {
           </AccordionItem>
         </Accordion>
       </Card>
-    </div>
   );
 };
 
