@@ -6,7 +6,7 @@ export const project = {
     title: "Cambodia Community Library",
     description: "Backend Developer, Frontend Developer",
     details:
-      "A two year school project aimed to improve literacy level in Ou Ruessei, a village located at Cambodia. My task is to build a Digital Library Management System with UserInterface to let the locals use ourlibrary with ease.",
+      "A two year school project aimed to improve literacy level in Ou Ruessei, a village located at Cambodia. My task is to build a Digital Library Management System (LMS) to let the locals use and manage the physical library with ease.",
     items: [
       {
         title: "Backend Developer",
