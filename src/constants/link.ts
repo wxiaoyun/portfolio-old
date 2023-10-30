@@ -5,8 +5,8 @@ export const LINKEDIN_WU_XIAOYUN: Url =
 	"https://www.linkedin.com/in/w-xiaoyun/";
 export const FLATICON_URL: Url = "https://www.flaticon.com/";
 export const DEVICON_URL: Url = "https://devicon.dev/";
-export const MAIL_ME: Url = "mailto:e0702008@u.nus.edu";
-export const SCHOOL_EMAIL: Url = "e0702008@u.nus.edu";
+export const MAIL_ME: Url = "mailto:mail@wxiaoyun.com";
+export const PERSONAL_EMAIL: Url = "mail@wxiaoyun.com";
 export const RESUME_URL: Url = "/WU_XIAOYUN_CV_v2.6.pdf";
 
 export const REACT_URL: Url = "https://reactjs.org/";
