@@ -12,7 +12,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import {
-  SCHOOL_EMAIL,
+  PERSONAL_EMAIL,
   EmailPNG,
   GITHUB_FORAEONS,
   LINKEDIN_WU_XIAOYUN,
@@ -79,7 +79,7 @@ export const ContactBtn: React.FC = () => {
               alt={EmailPNG.alt}
             />
             <span className="text-sm font-medium leading-none text-muted-foreground hover:opacity-70 transition">
-              {SCHOOL_EMAIL}
+              {PERSONAL_EMAIL}
             </span>
           </a>
         </DialogHeader>
