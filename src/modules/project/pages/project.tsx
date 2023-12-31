@@ -23,9 +23,9 @@ export const Project: React.FC = () => {
 				{project.title}
 			</h1>
 
-			<PortfolioPage />
-
 			<CommunityLib />
+
+			<PortfolioPage />
 		</motion.div>
 	);
 };

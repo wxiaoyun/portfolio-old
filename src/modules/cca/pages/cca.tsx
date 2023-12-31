@@ -5,7 +5,7 @@ import { cca } from "@/constants";
 import { RootState } from "@/store";
 import { slideVariants } from "@/lib/variants";
 import { slideFadeTransition } from "@/lib/transition";
-import { CvwoExco } from "../";
+import { CvwoExco, NUSCollegeClub } from "../";
 
 export const CCA: React.FC = () => {
 	const routeState = useSelector((state: RootState) => state.route);
@@ -24,6 +24,8 @@ export const CCA: React.FC = () => {
 			</h1>
 
 			<CvwoExco />
+
+			<NUSCollegeClub />
 		</motion.div>
 	);
 };
