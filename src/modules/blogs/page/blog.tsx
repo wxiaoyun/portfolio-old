@@ -1,14 +1,12 @@
 import React from "react";
-import { useSelector } from "react-redux"; import {
-  useQuery,
-} from '@tanstack/react-query'
+import { useQuery } from '@tanstack/react-query'
 import { AnimatePresence, motion } from "framer-motion";
-import { RootState } from "@/store";
 import { FETCH_MEDIUM_FEED_URL, blog } from "@/constants";
 import { Centred } from "@/modules";
 import { slideVariants } from "@/lib/variants";
 import { slideTransition } from "@/lib/transition";
-import { BlogSkeleton, BlogCard, BlogMe } from "../";
+import { useDirection } from "@/hooks";
+import { BlogSkeleton, BlogCard, BlogMe } from "..";
 
 const fetchBlogs = async () => {
   const [response] = await Promise.all([
@@ -20,9 +18,7 @@ const fetchBlogs = async () => {
 }
 
 export const Blog: React.FC = () => {
-  const routeState = useSelector((state: RootState) => state.route);
-
-
+  const direction = useDirection();
 
   const blogQuery = useQuery({
     queryKey: ['blog'],
@@ -33,7 +29,7 @@ export const Blog: React.FC = () => {
     <motion.div
       className="flex flex-col  items-center px-6 w-full"
       variants={slideVariants}
-      custom={routeState.direction}
+      custom={direction}
       initial="enter"
       animate="center"
       exit="exit"

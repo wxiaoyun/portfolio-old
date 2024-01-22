@@ -118,5 +118,6 @@ export const education = {
 		},
 		time: "Aug 2022 - May 2026",
 		location: "Singapore",
+		accordion_value: "nusc",
 	},
 };

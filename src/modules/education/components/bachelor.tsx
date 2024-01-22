@@ -19,11 +19,11 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { education, NUSLogo, TopAccordionDropDownTimeout } from "@/constants";
 
 export const Bachelor: React.FC = () => {
-  const [value, setValue] = React.useState<string[]>([]);
+  const [value, setValue] = React.useState("");
 
   React.useEffect(() => {
     const timeoutID = setTimeout(() => {
-      setValue([education.nus.accordion_value]);
+      setValue(education.nus.accordion_value);
     }, TopAccordionDropDownTimeout);
 
     return () => clearTimeout(timeoutID);
@@ -31,7 +31,7 @@ export const Bachelor: React.FC = () => {
 
   return (
     <Card className="w-full bg-primary-foreground border-none shadow-lg">
-      <Accordion type="multiple" value={value} onValueChange={setValue}>
+      <Accordion type="single" value={value} onValueChange={setValue} collapsible>
         <AccordionItem value={education.nus.accordion_value}>
           <AccordionTrigger className="pr-3">
             <CardHeader className="text-left w-full">
