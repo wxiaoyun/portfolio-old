@@ -116,6 +116,11 @@ export const TailwindCSSLogo: Img = {
 	alt: "tailwind",
 };
 
+export const DockerLogo: Img = {
+	src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain.svg",
+	alt: "docker",
+};
+
 export const RedisLogo: Img = {
 	src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
 	alt: "redis",
@@ -139,4 +144,14 @@ export const RailsLogo: Img = {
 export const NodeJSLogo: Img = {
 	src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
 	alt: "nodejs",
+};
+
+export const GoogleCloudLogo: Img = {
+	src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
+	alt: "googlecloud",
+};
+
+export const MaterialUILogo: Img = {
+	src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
+	alt: "materialui",
 };

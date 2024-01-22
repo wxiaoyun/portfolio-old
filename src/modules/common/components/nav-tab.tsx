@@ -2,25 +2,25 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/components/theme-provider";
+import { useLocation, useNavigate } from "react-router-dom";
+import { generatePathWithDirection } from "@/util";
+import { cn } from "@/lib/utils";
 
-export const NavTab: React.FC<{
-  nav: (path: string) => void;
-  link: NavLink;
-  currentPath: string;
-}> = ({ nav, link, currentPath }) => {
+export const NavTab: React.FC<{ link: NavLink; }> = ({ link }) => {
+  const navigate = useNavigate();
+  const { pathname } = useLocation()
   const theme = useTheme();
-  const clnm = `relative hidden lg:inline rounded-full text-lg ${
-    theme.theme === "dark" ? "text-primary" : "text-background"
-  }`; // flip color due to mix-blend-exclusion
-
   return (
     <Button
-      onClick={() => nav(link.path)}
+      onClick={() => navigate(generatePathWithDirection(pathname, link.path))}
       variant={"link"}
       size="sm"
-      className={clnm}
+      className={cn(
+        "relative hidden lg:inline rounded-full text-lg",
+        theme.theme === "dark" ? "text-primary" : "text-background"
+      )}
     >
-      {currentPath === link.path && (
+      {pathname === link.path && (
         <motion.div
           layoutId="active-pill"
           className="absolute inset-0 bg-primary z-[5]"

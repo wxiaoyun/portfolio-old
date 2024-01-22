@@ -9,3 +9,4 @@ export * from "./github-icon";
 export * from "./linkedin-icon";
 export * from "./cvwo-logo";
 export * from "./tool-tip";
+export * from "./logo-carousel";

@@ -1,73 +1,69 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useQuery } from '@tanstack/react-query'
 import { AnimatePresence, motion } from "framer-motion";
-import { AppDispatch, RootState } from "@/store";
-import { blogSlice, fetchMediumData } from "@/store/slices";
-import { blog } from "@/constants";
+import { FETCH_MEDIUM_FEED_URL, blog } from "@/constants";
 import { Centred } from "@/modules";
 import { slideVariants } from "@/lib/variants";
 import { slideTransition } from "@/lib/transition";
-import { BlogSkeleton, BlogCard, BlogMe } from "../";
+import { useDirection } from "@/hooks";
+import { BlogSkeleton, BlogCard, BlogMe } from "..";
+
+const fetchBlogs = async () => {
+  const [response] = await Promise.all([
+    fetch(FETCH_MEDIUM_FEED_URL),
+    new Promise((resolve) => setTimeout(resolve, 2200)),
+  ]); // Simulate loading
+  const data = await response.json();
+  return data as MediumData;
+}
 
 export const Blog: React.FC = () => {
-	const dispatch = useDispatch<AppDispatch>();
-	const blogState = useSelector((state: RootState) => state.blog);
-	const routeState = useSelector((state: RootState) => state.route);
+  const direction = useDirection();
 
-	React.useEffect(() => {
-		if (blogState.data) return; // already fetched data
+  const blogQuery = useQuery({
+    queryKey: ['blog'],
+    queryFn: fetchBlogs,
+  })
 
-		const timeoutID = setTimeout(() => {
-			// delay skeleton for faster preceived load
-			if (blogState.fetchState === "idle")
-				dispatch(blogSlice.actions.setFetchState("loading"));
-		}, 300);
+  return (
+    <motion.div
+      className="flex flex-col  items-center px-6 w-full"
+      variants={slideVariants}
+      custom={direction}
+      initial="enter"
+      animate="center"
+      exit="exit"
+      transition={slideTransition}
+    >
+      <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl self-start">
+        {blog.title}
+      </h1>
 
-		dispatch(fetchMediumData());
+      <AnimatePresence initial={false}>
+        {/* Loading Skeleton */}
+        {blogQuery.isLoading &&
+          new Array(3).fill(0).map((_, index) => <BlogSkeleton key={index} />)}
 
-		return () => clearTimeout(timeoutID);
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []); // only run on mount
+        {/* Failed to fetch data */}
+        {blogQuery.isError && (
+          <Centred>
+            <p className="text-gray-500 text-center">Failed to fetch blogs</p>
+          </Centred>
+        )}
 
-	return (
-		<motion.div
-			className="flex flex-col  items-center px-6 w-full"
-			variants={slideVariants}
-			custom={routeState.direction}
-			initial="enter"
-			animate="center"
-			exit="exit"
-			transition={slideTransition}
-		>
-			<h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl self-start">
-				{blog.title}
-			</h1>
+        {/* Successfully fetched data */}
+        {blogQuery.isSuccess && (
+          <>
+            <BlogMe feed={blogQuery.data.feed} />
 
-			<AnimatePresence initial={false}>
-				{/* Loading Skeleton */}
-				{blogState.fetchState === "loading" &&
-					new Array(3).fill(0).map((_, index) => <BlogSkeleton key={index} />)}
-
-				{/* Failed to fetch data */}
-				{blogState.fetchState === "failed" && (
-					<Centred>
-						<p className="text-gray-500 text-center">Failed to fetch blogs</p>
-					</Centred>
-				)}
-
-				{/* Successfully fetched data */}
-				{blogState.fetchState === "succeeded" && (
-					<>
-						<BlogMe feed={blogState.data!.feed} />
-
-						{blogState.data!.items.map((item) => (
-							<BlogCard key={item.guid} item={item} />
-						))}
-					</>
-				)}
-			</AnimatePresence>
-		</motion.div>
-	);
+            {blogQuery.data.items.map((item) => (
+              <BlogCard key={item.guid} item={item} />
+            ))}
+          </>
+        )}
+      </AnimatePresence>
+    </motion.div>
+  );
 };
 
 export default Blog;
