@@ -61,9 +61,7 @@ export const PortfolioPage: React.FC = () => {
                 Tech Stack
               </h4>
 
-              <div className="w-full flex justify-center">
-                <LogoCarousel imgs={project.portfolio.techstack} />
-              </div>
+              <LogoCarousel imgs={project.portfolio.techstack} />
 
               <Separator />
             </CardContent>

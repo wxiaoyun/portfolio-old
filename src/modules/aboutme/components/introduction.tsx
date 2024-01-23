@@ -92,9 +92,9 @@ export const Introduction: React.FC = () => {
         </div>
       </div>
 
-      <p className="leading-7">{aboutme.introduction.p1}</p>
+      <p className="leading-7 max-w-screen-md mx-auto">{aboutme.introduction.p1}</p>
 
-      <p className="leading-7">{aboutme.introduction.p2}</p>
+      <p className="leading-7 max-w-screen-md mx-auto">{aboutme.introduction.p2}</p>
     </div>
   );
 };

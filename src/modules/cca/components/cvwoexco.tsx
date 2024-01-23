@@ -33,7 +33,7 @@ export const CvwoExco: React.FC = () => {
 
   return (
     <Card className="w-full bg-primary-foreground border-none shadow-lg">
-      <Accordion type="single" value={value} onValueChange={setValue}>
+      <Accordion type="single" value={value} onValueChange={setValue} collapsible>
         <AccordionItem value={cca.cvwoexco.accordion_value}>
           <AccordionTrigger className="pr-3">
             <CardHeader className="text-left w-full">

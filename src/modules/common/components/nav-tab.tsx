@@ -20,7 +20,7 @@ export const NavTab: React.FC<{ link: NavLink; }> = ({ link }) => {
         theme.theme === "dark" ? "text-primary" : "text-background"
       )}
     >
-      {pathname === link.path && (
+      {pathname.replace("/", "") === link.path && (
         <motion.div
           layoutId="active-pill"
           className="absolute inset-0 bg-primary z-[5]"

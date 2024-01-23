@@ -54,7 +54,6 @@ export const project = {
 			Imgs.TailwindCSSLogo,
 			Imgs.BunPNG,
 			Imgs.GoogleCloudLogo,
-			// repeat to cycle
 			Imgs.TypeScriptLogo,
 			Imgs.ReactLogo,
 			Imgs.TailwindCSSLogo,

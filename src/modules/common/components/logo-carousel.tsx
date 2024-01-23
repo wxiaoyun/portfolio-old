@@ -14,25 +14,27 @@ export const LogoCarousel: React.FC<{ imgs: Img[] }> = ({ imgs }) => {
 
   const autoPlayPlugin = Autoplay({
     playOnInit: true,
-    delay: 3000,
+    delay: 1500,
     stopOnInteraction: false,
     stopOnMouseEnter: true,
   });
 
   return (
-    <Carousel className="w-full max-w-fit lg:max-w-none"
+    <Carousel className='w-full'
       opts={{ align: "start", loop: true }}
       plugins={[autoPlayPlugin]}
     >
-      <CarouselContent>
+      <CarouselContent className='-ml-3'>
         {imgs.map((item) => (
-          <CarouselItem key={item.src} className='md:basis-1/5 basis-1/4'>
-            <img
-              src={item.src}
-              alt={item.alt}
-              height={iconSize}
-              width={iconSize}
-            />
+          <CarouselItem key={item.src} className='md:basis-1/5 basis-1/4 pl-3'>
+            <div className='flex aspect-square items-center justify-center p-1'>
+              <img
+                src={item.src}
+                alt={item.alt}
+                height={iconSize}
+                width={iconSize}
+              />
+            </div>
           </CarouselItem>
         ))}
       </CarouselContent>

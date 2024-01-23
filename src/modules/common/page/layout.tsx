@@ -4,13 +4,9 @@ import { Footer, Navbar } from "..";
 
 export const Layout: React.FC = () => {
   return (
-    <div className="relative min-h-[calc(100vh+1px)] w-full flex flex-col items-center">
+    <div className="relative min-h-[calc(100vh+1px)] w-full max-w-screen-lg flex flex-col mx-auto pb-24">
       <Navbar />
-
-      <div className="flex-grow max-w-2xl w-full flex justify-center mb-24">
-        <Outlet />
-      </div>
-
+      <Outlet />
       <Footer />
     </div>
   );
