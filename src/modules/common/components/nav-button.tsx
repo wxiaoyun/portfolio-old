@@ -11,7 +11,6 @@ import {
 import { Button } from "@/components/ui/button";
 import { NavLinks, RESUME_URL } from "@/constants";
 import { useLocation, useNavigate } from "react-router-dom";
-import { generatePathWithDirection } from "@/util";
 
 export const NavButton: React.FC = () => {
   const navigate = useNavigate();
@@ -38,7 +37,7 @@ export const NavButton: React.FC = () => {
           {NavLinks.map((link, index) => (
             <li key={index}>
               <Button
-                onClick={() => navigate(generatePathWithDirection(pathname, link.path))}
+                onClick={() => navigate(`${link.path}?from=${pathname}`)}
                 variant={"ghost"}
                 size="sm"
                 className="w-full justify-start"

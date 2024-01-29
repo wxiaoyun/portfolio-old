@@ -7,7 +7,3 @@ export const getDirection = (currentPath: string, nextPath: string) => {
 	const nextIndex = RouteArray.findIndex((route) => route === nextPath);
 	return nextIndex - currentIndex;
 };
-
-export const generatePathWithDirection = (current: string, next: string) => {
-	return `/${next}?dir=${getDirection(current, next)}`;
-};

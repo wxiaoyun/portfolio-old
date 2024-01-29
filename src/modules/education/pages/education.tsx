@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useLocation } from "react-router-dom";
 import { education } from "@/constants";
 import { slideVariants } from "@/lib/variants";
 import { slideFadeTransition } from "@/lib/transition";
@@ -7,7 +8,8 @@ import { useDirection } from "@/hooks";
 import { Bachelor, NUSCollege } from "..";
 
 export const Education: React.FC = () => {
-  const direction = useDirection();
+  const { pathname } = useLocation()
+  const direction = useDirection(pathname);
 
   return (
     <motion.div

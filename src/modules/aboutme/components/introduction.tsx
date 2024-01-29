@@ -66,7 +66,7 @@ export const Introduction: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-[calc(100vh-7rem)] flex flex-col justify-center items-center gap-12">
+    <div className="min-h-[calc(100dvh-7rem)] w-full flex flex-col justify-center items-center gap-12">
       <div className="flex flex-col lg:flex-row justify-center items-center gap-12">
         <AnimatePresence mode="wait">
           <motion.img
@@ -94,7 +94,7 @@ export const Introduction: React.FC = () => {
 
       <p className="leading-7 max-w-screen-md mx-auto">{aboutme.introduction.p1}</p>
 
-      <p className="leading-7 max-w-screen-md mx-auto">{aboutme.introduction.p2}</p>
+      <p className="leading-7 max-w-screen-md mx-auto whitespace-pre-wrap">{aboutme.introduction.p2}</p>
     </div>
   );
 };

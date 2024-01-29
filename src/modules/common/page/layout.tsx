@@ -4,7 +4,7 @@ import { Footer, Navbar } from "..";
 
 export const Layout: React.FC = () => {
   return (
-    <div className="relative min-h-[calc(100vh+1px)] w-full max-w-screen-lg flex flex-col mx-auto pb-24">
+    <div className="relative min-h-[100dvh+1px)] w-full max-w-screen-lg flex flex-col mx-auto pb-24">
       <Navbar />
       <Outlet />
       <Footer />

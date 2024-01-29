@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useLocation } from "react-router-dom";
 import { experience } from "@/constants";
 import { slideVariants } from "@/lib/variants";
 import { useDirection } from "@/hooks";
@@ -7,7 +8,8 @@ import { slideFadeTransition } from "@/lib/transition";
 import { Cvwo } from "..";
 
 export const Experience: React.FC = () => {
-  const direction = useDirection();
+  const { pathname } = useLocation()
+  const direction = useDirection(pathname);
   return (
     <motion.div
       className="flex flex-col gap-y-8 lg:gap-y-12 items-center px-6 w-full"

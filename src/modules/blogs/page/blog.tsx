@@ -1,4 +1,5 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import { useQuery } from '@tanstack/react-query'
 import { AnimatePresence, motion } from "framer-motion";
 import { FETCH_MEDIUM_FEED_URL, blog } from "@/constants";
@@ -18,7 +19,8 @@ const fetchBlogs = async () => {
 }
 
 export const Blog: React.FC = () => {
-  const direction = useDirection();
+  const { pathname } = useLocation()
+  const direction = useDirection(pathname);
 
   const blogQuery = useQuery({
     queryKey: ['blog'],

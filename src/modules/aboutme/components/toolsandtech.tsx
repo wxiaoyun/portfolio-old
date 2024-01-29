@@ -13,7 +13,7 @@ export const ToolsAndTech: React.FC = () => {
       viewport={{ once: true, amount: 0.2 }}
       variants={fadeRightSlideInVariants}
     >
-      <div className="text-lg font-semibold w-full">
+      <div className="text-lg font-semibold">
         {aboutme.toolsandtech.title}
       </div>
 

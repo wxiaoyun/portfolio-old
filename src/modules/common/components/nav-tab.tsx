@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/components/theme-provider";
 import { useLocation, useNavigate } from "react-router-dom";
-import { generatePathWithDirection } from "@/util";
 import { cn } from "@/lib/utils";
 
 export const NavTab: React.FC<{ link: NavLink; }> = ({ link }) => {
@@ -12,7 +11,7 @@ export const NavTab: React.FC<{ link: NavLink; }> = ({ link }) => {
   const theme = useTheme();
   return (
     <Button
-      onClick={() => navigate(generatePathWithDirection(pathname, link.path))}
+      onClick={() => navigate(`${link.path}?from=${pathname}`)}
       variant={"link"}
       size="sm"
       className={cn(

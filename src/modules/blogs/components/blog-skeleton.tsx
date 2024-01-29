@@ -17,7 +17,7 @@ export const BlogSkeleton: React.FC = () => {
         zIndex: -1,
         height: 0,
         opacity: 0,
-        y: "-30vh",
+        y: "-30dvh",
       }}
       animate={fadeInAnimation}
       transition={{
