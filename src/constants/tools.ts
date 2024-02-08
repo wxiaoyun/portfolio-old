@@ -2,14 +2,14 @@ import * as Logos from "./image.ts";
 
 export const Tools: Img[] = [
 	Logos.UbuntuLogo,
-	Logos.VimLogo,
+	Logos.NeoVimLogo,
 	Logos.GitLogo,
 	Logos.GoLogo,
 	Logos.TypeScriptLogo,
-	Logos.JavaScriptLogo,
 	Logos.JavaLogo,
-	Logos.RubyLogo,
 	Logos.PythonLogo,
+	Logos.CLogo,
+	Logos.RubyLogo,
 	Logos.ReactLogo,
 	Logos.ReduxLogo,
 	Logos.HTMLLogo,
@@ -19,6 +19,8 @@ export const Tools: Img[] = [
 	Logos.RedisLogo,
 	Logos.PostgreSQLLogo,
 	Logos.MySQLLogo,
+	Logos.NextJSLogo,
 	Logos.RailsLogo,
+	Logos.BunLogo,
 	Logos.NodeJSLogo,
 ];

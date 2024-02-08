@@ -41,108 +41,118 @@ export const EmailPNG: Img = {
 	alt: "Email Icon",
 };
 
-export const BunPNG: Img = {
-	src: "/bun.png",
-	alt: "Bun Icon",
-};
-
 export const UbuntuLogo: Img = {
-	src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg",
+	src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ubuntu/ubuntu-original.svg",
 	alt: "ubuntu",
 };
 
-export const VimLogo: Img = {
-	src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vim/vim-plain.svg",
-	alt: "vim",
+export const NeoVimLogo: Img = {
+	src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/neovim/neovim-original.svg",
+	alt: "neovim",
+};
+
+export const VSCodeLogo: Img = {
+	src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg",
+	alt: "vscode",
 };
 
 export const GitLogo: Img = {
-	src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+	src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
 	alt: "git",
 };
 
+export const DockerLogo: Img = {
+	src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain.svg",
+	alt: "docker",
+};
+
 export const GoLogo: Img = {
-	src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg",
+	src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg",
 	alt: "go",
 };
 
 export const TypeScriptLogo: Img = {
-	src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+	src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
 	alt: "typescript",
 };
 
-export const JavaScriptLogo: Img = {
-	src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-	alt: "javascript",
-};
-
 export const JavaLogo: Img = {
-	src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+	src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
 	alt: "java",
 };
 
-export const RubyLogo: Img = {
-	src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg",
-	alt: "ruby",
-};
-
 export const PythonLogo: Img = {
-	src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+	src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
 	alt: "python",
 };
 
+export const CLogo: Img = {
+	src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg",
+	alt: "c",
+};
+
+export const RubyLogo: Img = {
+	src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ruby/ruby-original.svg",
+	alt: "ruby",
+};
+
 export const ReactLogo: Img = {
-	src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+	src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
 	alt: "react",
 };
 
 export const ReduxLogo: Img = {
-	src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+	src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg",
 	alt: "redux",
 };
 
 export const HTMLLogo: Img = {
-	src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+	src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
 	alt: "html",
 };
 
 export const CSSLogo: Img = {
-	src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+	src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
 	alt: "css",
 };
 
 export const TailwindCSSLogo: Img = {
-	src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+	src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
 	alt: "tailwind",
 };
 
-export const DockerLogo: Img = {
-	src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain.svg",
-	alt: "docker",
-};
-
 export const RedisLogo: Img = {
-	src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
+	src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg",
 	alt: "redis",
 };
 
 export const PostgreSQLLogo: Img = {
-	src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+	src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
 	alt: "postgresql",
 };
 
 export const MySQLLogo: Img = {
-	src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+	src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
 	alt: "mysql",
 };
 
+export const NextJSLogo: Img = {
+	src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+	alt: "nextjs",
+};
+
 export const RailsLogo: Img = {
-	src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-plain.svg",
+	src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rails/rails-plain.svg",
 	alt: "rails",
 };
 
+export const BunLogo: Img = {
+	src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bun/bun-original.svg",
+	alt: "bunjs",
+};
+
 export const NodeJSLogo: Img = {
-	src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+	src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
 	alt: "nodejs",
 };
 
